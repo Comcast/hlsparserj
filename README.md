@@ -9,6 +9,43 @@ http://tools.ietf.org/html/draft-pantos-http-live-streaming-12
 
 ## Examples
 
+### Parse a Master Playlist from an HTTP Endpoint
+
+```
+package com.comcast.viper.hlsparserj;
+
+import java.io.IOException;
+import java.net.MalformedURLException;
+import java.net.URL;
+import java.text.MessageFormat;
+
+import com.comcast.viper.hlsparserj.tags.master.StreamInf;
+
+public class Test {
+
+    public static void main(String[] args) throws MalformedURLException, IOException {
+
+        IPlaylist playlist = PlaylistFactory.parsePlaylist(PlaylistVersion.TWELVE, new URL("http://localhost/index.m3u8"));
+
+        if (playlist.isMasterPlaylist()) {
+
+            MasterPlaylist mp = (MasterPlaylist) playlist;
+            for(StreamInf stream : mp.getVariantStreams()) {
+                System.out.println(MessageFormat.format(
+                    "Program ID: [{0}]; Bandwidth: [{1}]; Codecs: [{2}]; Resolution: [{3}]; URI: [{4}];",
+                        new Object[] {
+                            stream.getProgramId(),
+                            String.valueOf(stream.getBandwidth()),
+                            stream.getCodecs(),
+                            stream.getResolution(),
+                            stream.getURI()
+                        }
+                ));
+            }
+        }
+    }
+}
+```
 
 ### Find the Variant Playlist from the Master Playlist with the Highest Bitrate:
 
