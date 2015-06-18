@@ -15,15 +15,15 @@
  */
 package com.comcast.viper.hlsparserj;
 
-import java.util.ArrayList;
-import java.util.List;
-import java.util.concurrent.ConcurrentHashMap;
-
 import com.comcast.viper.hlsparserj.tags.Tag;
 import com.comcast.viper.hlsparserj.tags.TagFactory;
 import com.comcast.viper.hlsparserj.tags.TagNames;
 import com.comcast.viper.hlsparserj.tags.UnparsedTag;
 import com.comcast.viper.hlsparserj.tags.Version;
+
+import java.util.ArrayList;
+import java.util.List;
+import java.util.concurrent.ConcurrentHashMap;
 
 /**
  * Base class for the playlist object.
@@ -109,7 +109,9 @@ public abstract class AbstractPlaylist implements IPlaylist {
                     tag.setTag(unparsedTag);
                 }
             }
-            parsedTagCache.put(tagName, tag);
+            if (tag != null) {
+                parsedTagCache.put(tagName, tag);
+            }
         }
         return tag;
     }

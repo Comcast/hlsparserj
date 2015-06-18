@@ -15,9 +15,6 @@
  */
 package com.comcast.viper.hlsparserj;
 
-import java.util.ArrayList;
-import java.util.List;
-
 import com.comcast.viper.hlsparserj.tags.Tag;
 import com.comcast.viper.hlsparserj.tags.TagFactory;
 import com.comcast.viper.hlsparserj.tags.TagNames;
@@ -30,6 +27,9 @@ import com.comcast.viper.hlsparserj.tags.media.MediaSequence;
 import com.comcast.viper.hlsparserj.tags.media.PlaylistType;
 import com.comcast.viper.hlsparserj.tags.media.Segment;
 import com.comcast.viper.hlsparserj.tags.media.TargetDuration;
+
+import java.util.ArrayList;
+import java.util.List;
 
 /**
  * Abstract class for a media playlist.
@@ -133,7 +133,7 @@ public abstract class MediaPlaylist extends AbstractPlaylist {
      * @return list of tags
      */
     private List<? extends Tag> getGenericSegments(final String segmentTagName) {
-        List<Tag> tagList = parsedTagListCache.get(TagNames.EXTINF);
+        List<Tag> tagList = parsedTagListCache.get(segmentTagName);
         if (tagList == null) {
             tagList = new ArrayList<Tag>();
             boolean discontinuity = false;
@@ -161,7 +161,7 @@ public abstract class MediaPlaylist extends AbstractPlaylist {
                 }
             }
 
-            parsedTagListCache.put(TagNames.EXTINF, tagList);
+            parsedTagListCache.put(segmentTagName, tagList);
         }
         return tagList;
     }
@@ -171,7 +171,7 @@ public abstract class MediaPlaylist extends AbstractPlaylist {
      * @return boolean flag
      */
     public boolean getIFramesOnly() {
-        Object ifo = getTag(TagNames.EXTXPLAYLISTTYPE);
+        Object ifo = getTag(TagNames.EXTXIFRAMESONLY);
         if (ifo == null) {
             return false;
         }
