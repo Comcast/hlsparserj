@@ -171,7 +171,7 @@ public abstract class MediaPlaylist extends AbstractPlaylist {
      * @return boolean flag
      */
     public boolean getIFramesOnly() {
-        Object ifo = getTag(TagNames.EXTXPLAYLISTTYPE);
+        Object ifo = getTag(TagNames.EXTXIFRAMESONLY);
         if (ifo == null) {
             return false;
         }
