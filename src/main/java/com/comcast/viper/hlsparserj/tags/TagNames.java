@@ -15,6 +15,7 @@
  */
 package com.comcast.viper.hlsparserj.tags;
 
+import com.comcast.viper.hlsparserj.tags.master.IFrameStreamInf;
 import com.comcast.viper.hlsparserj.tags.master.Media;
 import com.comcast.viper.hlsparserj.tags.master.StreamInf;
 import com.comcast.viper.hlsparserj.tags.media.AllowCache;
@@ -225,5 +226,21 @@ public class TagNames {
     public static final String EXTXIFRAMESONLY = "EXT-X-I-FRAMES-ONLY";
     static {
         TagFactory.registerTag(EXTXIFRAMESONLY, IFramesOnly.class);
+    }
+
+    /**
+     * Iframes stream tag.
+     *
+     * <pre>
+     * Format:
+     *   #EXT-X-STREAM-INF:&lt;attribute-list&gt;
+     *
+     * Example:
+     *  #EXT-X-I-FRAME-STREAM-INF:BANDWIDTH=28451,CODECS="avc1.4d400d",URI="iframe_index.m3u8"
+     * </pre>
+     */
+    public static final String EXTXIFRAMESSTREAMINF = "EXT-X-I-FRAME-STREAM-INF";
+    static {
+        TagFactory.registerTag(EXTXIFRAMESSTREAMINF, IFrameStreamInf.class);
     }
 }
