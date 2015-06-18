@@ -133,7 +133,7 @@ public abstract class MediaPlaylist extends AbstractPlaylist {
      * @return list of tags
      */
     private List<? extends Tag> getGenericSegments(final String segmentTagName) {
-        List<Tag> tagList = parsedTagListCache.get(TagNames.EXTINF);
+        List<Tag> tagList = parsedTagListCache.get(segmentTagName);
         if (tagList == null) {
             tagList = new ArrayList<Tag>();
             boolean discontinuity = false;
@@ -161,7 +161,7 @@ public abstract class MediaPlaylist extends AbstractPlaylist {
                 }
             }
 
-            parsedTagListCache.put(TagNames.EXTINF, tagList);
+            parsedTagListCache.put(segmentTagName, tagList);
         }
         return tagList;
     }
@@ -171,7 +171,7 @@ public abstract class MediaPlaylist extends AbstractPlaylist {
      * @return boolean flag
      */
     public boolean getIFramesOnly() {
-        Object ifo = getTag(TagNames.EXTXPLAYLISTTYPE);
+        Object ifo = getTag(TagNames.EXTXIFRAMESONLY);
         if (ifo == null) {
             return false;
         }

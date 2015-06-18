@@ -20,6 +20,7 @@ import java.util.List;
 
 import com.comcast.viper.hlsparserj.tags.TagNames;
 import com.comcast.viper.hlsparserj.tags.UnparsedTag;
+import com.comcast.viper.hlsparserj.tags.master.IFrameStreamInf;
 import com.comcast.viper.hlsparserj.tags.master.Media;
 import com.comcast.viper.hlsparserj.tags.master.StreamInf;
 
@@ -44,6 +45,15 @@ public abstract class MasterPlaylist extends AbstractPlaylist {
     @SuppressWarnings("unchecked")
     public List<StreamInf> getVariantStreams() {
         return (List<StreamInf>) getTagList(TagNames.EXTXSTREAMINF);
+    }
+
+    /**
+     * Return list of I-Frame streams (tags prefixed with 'EXT-X-I-FRAME-STREAM-INF').
+     * @return list of I-Frame streams
+     */
+    @SuppressWarnings("unchecked")
+    public List<IFrameStreamInf> getIFrameStreams() {
+        return (List<IFrameStreamInf>) getTagList(TagNames.EXTXIFRAMESSTREAMINF);
     }
 
     /**

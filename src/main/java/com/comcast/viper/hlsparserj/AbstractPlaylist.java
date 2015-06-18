@@ -109,7 +109,9 @@ public abstract class AbstractPlaylist implements IPlaylist {
                     tag.setTag(unparsedTag);
                 }
             }
-            parsedTagCache.put(tagName, tag);
+            if (tag != null) {
+                parsedTagCache.put(tagName, tag);
+            }
         }
         return tag;
     }
