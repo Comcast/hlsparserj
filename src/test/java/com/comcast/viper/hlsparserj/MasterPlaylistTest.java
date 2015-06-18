@@ -15,26 +15,23 @@
  */
 package com.comcast.viper.hlsparserj;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertFalse;
-import static org.junit.Assert.assertNotNull;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
+import com.comcast.viper.hlsparserj.tags.master.IFrameStreamInf;
+import com.comcast.viper.hlsparserj.tags.master.Media;
+import com.comcast.viper.hlsparserj.tags.master.StreamInf;
+import org.junit.After;
+import org.junit.Before;
+import org.junit.Test;
 
 import java.io.BufferedReader;
 import java.io.InputStream;
 import java.io.InputStreamReader;
 import java.util.List;
 
-import org.junit.After;
-import org.junit.Before;
-import org.junit.Test;
-
-import com.comcast.viper.hlsparserj.MasterPlaylist;
-import com.comcast.viper.hlsparserj.PlaylistFactory;
-import com.comcast.viper.hlsparserj.PlaylistVersion;
-import com.comcast.viper.hlsparserj.tags.master.Media;
-import com.comcast.viper.hlsparserj.tags.master.StreamInf;
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertFalse;
+import static org.junit.Assert.assertNotNull;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 public class MasterPlaylistTest {
 
@@ -134,6 +131,15 @@ public class MasterPlaylistTest {
     }
 
     @Test
+    public void iFrames() {
+        List<IFrameStreamInf> iFrameStreamInfs = masterPlaylist.getIFrameStreams();
+        assertEquals(3, iFrameStreamInfs.size());
+        assertTrue(iFrameStreamInfs.get(0).getURI().equals("01_iframe_index.m3u8"));
+        assertTrue(iFrameStreamInfs.get(1).getURI().equals("02_iframe_index.m3u8"));
+        assertTrue(iFrameStreamInfs.get(2).getURI().equals("03_iframe_index.m3u8"));
+    }
+
+    @Test
     public void testVariantStreamClosestToBitrate() {
         StreamInf variantStream = masterPlaylist.variantStreamClosestToBitrate(100000);
         assertNotNull(variantStream);
@@ -152,7 +158,7 @@ public class MasterPlaylistTest {
         List<StreamInf> variantStreams = masterPlaylist.getVariantStreams();
 
         StreamInf variantStream = variantStreams.get(0);
-        masterPlaylist.removeVariantStream(variantStream);;
+        masterPlaylist.removeVariantStream(variantStream);
 
         assertEquals(2, masterPlaylist.getVariantStreams().size());
         assertFalse(masterPlaylist.getVariantStreams().contains(variantStream));
