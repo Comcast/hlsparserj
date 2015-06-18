@@ -161,7 +161,7 @@ public abstract class MediaPlaylist extends AbstractPlaylist {
                 }
             }
 
-            parsedTagListCache.put(TagNames.EXTINF, tagList);
+            parsedTagListCache.put(segmentTagName, tagList);
         }
         return tagList;
     }
