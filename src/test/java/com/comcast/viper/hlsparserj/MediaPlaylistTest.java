@@ -15,17 +15,16 @@
  */
 package com.comcast.viper.hlsparserj;
 
-import static org.junit.Assert.assertEquals;
-import static org.junit.Assert.assertTrue;
-import static org.junit.Assert.fail;
-
-import java.io.InputStream;
-
+import com.comcast.viper.hlsparserj.tags.media.Key;
 import org.junit.After;
 import org.junit.Before;
 import org.junit.Test;
 
-import com.comcast.viper.hlsparserj.tags.media.Key;
+import java.io.InputStream;
+
+import static org.junit.Assert.assertEquals;
+import static org.junit.Assert.assertTrue;
+import static org.junit.Assert.fail;
 
 public class MediaPlaylistTest {
 
