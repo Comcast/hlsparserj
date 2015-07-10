@@ -82,13 +82,13 @@ public abstract class MasterPlaylist extends AbstractPlaylist {
      * @param bitrate bitrate
      */
     public void keepVariantStreamClosestToBitrate(final int bitrate) {
-        StreamInf variantStreamToKeep = variantStreamClosestToBitrate(bitrate);
+        final StreamInf variantStreamToKeep = variantStreamClosestToBitrate(bitrate);
 
-        List<StreamInf> variantStreams = getVariantStreams();
-        List<StreamInf> streamsToRemove = new ArrayList<StreamInf>();
+        final List<StreamInf> variantStreams = getVariantStreams();
+        final List<StreamInf> streamsToRemove = new ArrayList<StreamInf>();
 
         for (int i = 0; i < variantStreams.size(); i++) {
-            StreamInf variantStream = variantStreams.get(i);
+            final StreamInf variantStream = variantStreams.get(i);
             if (!variantStream.equals(variantStreamToKeep)) {
                 streamsToRemove.add(variantStream);
             }
@@ -108,7 +108,7 @@ public abstract class MasterPlaylist extends AbstractPlaylist {
         StreamInf closestVariant = null;
 
         for (StreamInf variant : getVariantStreams()) {
-            int bitrateDelta = Math.abs(variant.getBandwidth() - bitrate);
+            final int bitrateDelta = Math.abs(variant.getBandwidth() - bitrate);
             if (bitrateDelta < closestBitrate) {
                 closestBitrate = bitrateDelta;
                 closestVariant = variant;

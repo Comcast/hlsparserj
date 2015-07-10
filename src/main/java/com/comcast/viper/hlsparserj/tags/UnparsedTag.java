@@ -27,6 +27,7 @@ public class UnparsedTag {
 
     private static final Pattern TAGPATTERN = Pattern.compile("^#(EXT.*?):(.*)");
     private static final String NONENCLOSEDQUOTES = ",(?=([^\"]*\"[^\"]*\")*[^\"]*$)";
+    private static final String URI_ATTR = "URI";
 
     private String tagName;
     private Map<String, String> attributes;
@@ -111,20 +112,20 @@ public class UnparsedTag {
      * @param line playlist line item
      */
     private void parseTagLine(final String line) {
-        Matcher lineMatcher = TAGPATTERN.matcher(line);
+        final Matcher lineMatcher = TAGPATTERN.matcher(line);
 
         // Create a matcher that uses the TAGPATTERN
         if (lineMatcher.find()) {
             tagName = lineMatcher.group(1);
 
-            String attributeList = lineMatcher.group(2);
+            final String attributeList = lineMatcher.group(2);
             int noNameCount = 0;
             // We only want to split on comma's that are not enclosed in quotes,
             // because some individual attributes
             // can themselves be comma delimited lists. For example, CODECS is
             // often a comman delimited list
             for (String attribute : attributeList.split(NONENCLOSEDQUOTES)) {
-                String[] nameValuePair = attribute.split("=");
+                final String[] nameValuePair = attribute.split("=");
                 if (nameValuePair.length == 1) {
                     // If there was no "=", then the attribute is only a single
                     // value, not a list. For example,
@@ -141,6 +142,10 @@ public class UnparsedTag {
                 noNameCount++;
             }
 
+            // Set the URI if a URI attribute is present
+            if (attributes.containsKey(URI_ATTR)) {
+                uri = attributes.get(URI_ATTR);
+            }
         } else {
             // If the line startex with #EXT but does not contain a colon it is a
             // tag with no attributes

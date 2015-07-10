@@ -25,6 +25,7 @@ import java.io.InputStream;
 import java.net.URL;
 
 import org.apache.http.HttpStatus;
+import org.apache.http.client.config.RequestConfig;
 import org.apache.http.client.methods.CloseableHttpResponse;
 import org.apache.http.client.methods.HttpGet;
 import org.apache.http.impl.client.CloseableHttpClient;
@@ -57,7 +58,7 @@ public class PlaylistFactory {
      */
     public static AbstractPlaylist parsePlaylist(final PlaylistVersion playlistVersion,
             final InputStream playlistStream) throws IOException {
-        PlaylistParser parser = new PlaylistParser();
+        final PlaylistParser parser = new PlaylistParser();
         parser.parse(playlistStream);
         return getVersionSpecificPlaylist(parser, playlistVersion);
     }
@@ -72,7 +73,7 @@ public class PlaylistFactory {
      */
     public static AbstractPlaylist parsePlaylist(final PlaylistVersion playlistVersion,
             final String playlistString) {
-        PlaylistParser parser = new PlaylistParser();
+        final PlaylistParser parser = new PlaylistParser();
         parser.parse(playlistString);
         return getVersionSpecificPlaylist(parser, playlistVersion);
     }
@@ -87,17 +88,28 @@ public class PlaylistFactory {
      *
      * @param playlistVersion version of the playlist (V12 is the default)
      * @param playlistURL URL pointing to a playlist
+     * @param connectTimeout timeout (ms) until a connection with the server is established
+     * @param requestTimeout timeout (ms) used when requesting a connection from the connection manager
+     * @param socketTimeout timeout (ms) waiting for data or a max period inactivity between 2 consecutive data packets
      * @return parsed playlist
      * @throws IOException on connection and parsing exceptions
      */
     public static AbstractPlaylist parsePlaylist(final PlaylistVersion playlistVersion,
-            final URL playlistURL) throws IOException {
-        HttpClientBuilder builder = HttpClientBuilder.create();
-        CloseableHttpClient httpClient = builder.build();
-        PlaylistParser parser = new PlaylistParser();
+            final URL playlistURL, final int connectTimeout, final int requestTimeout,
+            final int socketTimeout) throws IOException {
+
+        RequestConfig.Builder requestBuilder = RequestConfig.custom();
+        requestBuilder = requestBuilder.setConnectTimeout(connectTimeout);
+        requestBuilder = requestBuilder.setConnectionRequestTimeout(requestTimeout);
+        requestBuilder = requestBuilder.setSocketTimeout(socketTimeout);
+
+        final HttpClientBuilder builder = HttpClientBuilder.create();
+        builder.setDefaultRequestConfig(requestBuilder.build());
+        final CloseableHttpClient httpClient = builder.build();
+        final PlaylistParser parser = new PlaylistParser();
 
         try {
-            InputStream playlistStream = getPlaylistInputStream(httpClient, playlistURL);
+            final InputStream playlistStream = getPlaylistInputStream(httpClient, playlistURL);
             parser.parse(playlistStream);
         } finally {
             httpClient.close();
@@ -142,7 +154,7 @@ public class PlaylistFactory {
      */
     private static InputStream getPlaylistInputStream(final CloseableHttpClient httpClient,
             final URL url) throws IOException {
-        HttpGet get = new HttpGet(url.toString());
+        final HttpGet get = new HttpGet(url.toString());
         CloseableHttpResponse response = null;
         response = httpClient.execute(get);
         if (response == null) {

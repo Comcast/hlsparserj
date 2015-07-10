@@ -43,10 +43,10 @@ public class TagFactory {
     public static Tag createTag(final String tagName) {
         Object tagInstance = null;
 
-        Class<?> tagClass = tagMap.get(tagName);
+        final Class<?> tagClass = tagMap.get(tagName);
         if (tagClass != null) {
             try {
-                Constructor<?> tagCons = tagClass.getConstructor(new Class[] {});
+                final Constructor<?> tagCons = tagClass.getConstructor(new Class[] {});
                 tagInstance = tagCons.newInstance(new Object[] {});
             } catch (Exception e) {
                 e.printStackTrace();

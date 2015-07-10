@@ -97,7 +97,13 @@
 			<groupId>org.apache.httpcomponents</groupId>
 			<artifactId>httpcore</artifactId>
 			<version>${httpcore.version}</version>
-		</dependency>	   
+		</dependency>
+		<dependency>
+			<groupId>org.apache.wink</groupId>
+			<artifactId>wink-component-test-support</artifactId>
+			<version>1.4</version>
+			<scope>test</scope>
+		</dependency>
 	</dependencies>
 
 	<build>

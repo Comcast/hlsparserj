@@ -33,7 +33,7 @@ public class PlaylistParser {
 
     private InputStream playlistStream;
 
-    private List<UnparsedTag> tags;
+    private final List<UnparsedTag> tags;
 
     private static final String TAGPATTERN = "^#EXT.*";
     private static final String URIPATTERN = "^[^#].*";
@@ -86,7 +86,7 @@ public class PlaylistParser {
      * @param playlist playlist string
      */
     private void parseString(final String playlist) {
-        StringTokenizer tokenizer = new StringTokenizer(playlist, "\n");
+        final StringTokenizer tokenizer = new StringTokenizer(playlist, "\n");
 
         String line;
         UnparsedTag lastTag = null;
@@ -101,8 +101,8 @@ public class PlaylistParser {
      * @throws IOException on reading the inputStream
      */
     private void parseInputStream() throws IOException {
-        InputStreamReader isReader = new InputStreamReader(playlistStream);
-        BufferedReader bufReader = new BufferedReader(isReader);
+        final InputStreamReader isReader = new InputStreamReader(playlistStream);
+        final BufferedReader bufReader = new BufferedReader(isReader);
 
         UnparsedTag lastTag = null;
         String line;
@@ -126,7 +126,7 @@ public class PlaylistParser {
     private UnparsedTag processLine(final String line, final UnparsedTag lastTag) {
 
         if (line.matches(TAGPATTERN)) {
-            UnparsedTag newUnparsedTag = new UnparsedTag(line);
+            final UnparsedTag newUnparsedTag = new UnparsedTag(line);
             tags.add(newUnparsedTag);
 
             // Check if this tag specifies a variant stream. If so, this is

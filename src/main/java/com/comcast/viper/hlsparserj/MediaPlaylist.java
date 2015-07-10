@@ -141,7 +141,7 @@ public abstract class MediaPlaylist extends AbstractPlaylist {
             Key key = null;
 
             for (UnparsedTag unparsedTag : tags) {
-                String tagName = unparsedTag.getTagName();
+                final String tagName = unparsedTag.getTagName();
                 if (tagName.equals(TagNames.EXTXDISCONTINUITY)) {
                     discontinuity = true;
                 } else if (tagName.equals(TagNames.EXTXPROGRAMDATETIME)) {
@@ -150,7 +150,7 @@ public abstract class MediaPlaylist extends AbstractPlaylist {
                     key = new Key();
                     key.setTag(unparsedTag);
                 } else if (unparsedTag.getTagName().equals(segmentTagName)) {
-                    Segment segment = (Segment) TagFactory.createTag(segmentTagName);
+                    final Segment segment = (Segment) TagFactory.createTag(segmentTagName);
                     segment.setTag(unparsedTag);
                     segment.setDiscontinuity(discontinuity);
                     segment.setKey(key);
@@ -171,7 +171,7 @@ public abstract class MediaPlaylist extends AbstractPlaylist {
      * @return boolean flag
      */
     public boolean getIFramesOnly() {
-        Object ifo = getTag(TagNames.EXTXIFRAMESONLY);
+        final Object ifo = getTag(TagNames.EXTXIFRAMESONLY);
         if (ifo == null) {
             return false;
         }

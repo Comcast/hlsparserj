@@ -53,7 +53,7 @@ public class ByteRange extends Segment {
      * @return length attribute
      */
     public int getLength() {
-        String line = tag.getAttributes().get(UNNAMEDATTR0);
+        final String line = tag.getAttributes().get(UNNAMEDATTR0);
         return Integer.valueOf(line.split("@")[0]);
     }
 
@@ -62,8 +62,8 @@ public class ByteRange extends Segment {
      * @return offset attribute
      */
     public int getOffset() {
-        String line = tag.getAttributes().get(UNNAMEDATTR0);
-        String[] splitLine = line.split("@");
+        final String line = tag.getAttributes().get(UNNAMEDATTR0);
+        final String[] splitLine = line.split("@");
         if (splitLine.length > 1) {
             return Integer.valueOf(splitLine[1]);
         } else {

@@ -84,7 +84,7 @@ public abstract class AbstractPlaylist implements IPlaylist {
             tagList = new ArrayList<Tag>();
             for (UnparsedTag unparsedTag : tags) {
                 if (unparsedTag.getTagName().equals(tagName)) {
-                    Tag tag = TagFactory.createTag(tagName);
+                    final Tag tag = TagFactory.createTag(tagName);
                     tag.setTag(unparsedTag);
                     tagList.add(tag);
                 }
@@ -131,7 +131,7 @@ public abstract class AbstractPlaylist implements IPlaylist {
 
     @Override
     public String toString() {
-        StringBuilder builder = new StringBuilder();
+        final StringBuilder builder = new StringBuilder();
         for (UnparsedTag tag : tags) {
             builder.append(tag.getRawTag());
             if (tag.getURI() != null) {
