@@ -41,9 +41,9 @@
 	</licenses>
 
 	<scm>
-		<url>scm:git:git@gitlab.ula.lab.xcal.tv:origins-lib/hlsparserj.git</url>
-		<connection>scm:git:git@gitlab.ula.lab.xcal.tv:origins-lib/hlsparserj.git</connection>
-		<developerConnection>scm:git:git@gitlab.ula.lab.xcal.tv:origins-lib/hlsparserj.git</developerConnection>
+		<url>scm:git:git@github.com:Comcast/hlsparserj.git</url>
+		<connection>scm:git:git@github.com:Comcast/hlsparserj.git</connection>
+		<developerConnection>scm:git:git@github.com:Comcast/hlsparserj.git</developerConnection>
 		<tag>HEAD</tag>
 	</scm>
 
