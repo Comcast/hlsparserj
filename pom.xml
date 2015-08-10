@@ -20,7 +20,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>com.comcast</groupId>
 	<artifactId>hlsparserj</artifactId>
-	<version>1.0.0-SNAPSHOT</version>
+	<version>1.0.0</version>
 	<packaging>jar</packaging>
 
 	<name>HLS Manifest Parser Java Library</name>
@@ -44,7 +44,7 @@
 		<url>scm:git:git@github.com:Comcast/hlsparserj.git</url>
 		<connection>scm:git:git@github.com:Comcast/hlsparserj.git</connection>
 		<developerConnection>scm:git:git@github.com:Comcast/hlsparserj.git</developerConnection>
-		<tag>HEAD</tag>
+		<tag>hlsparserj-1.0.0</tag>
 	</scm>
 
 	<developers>
