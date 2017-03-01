@@ -1,8 +1,598 @@
 #EXTM3U
 #EXT-X-STREAM-INF:PROGRAM-ID=1, BANDWIDTH=200000
-gear1/prog_index.m3u8
+gear1/prog_index.m3u8#EXTM3U
+#EXTINF:0,Канал 1
+group,Channels
+#EXTINF:0,Канал 2
+ext,Tecnotv hd,http://live.tvplayerlatino.com/usuarios/src1/fRonE/web/test.m3u8
+#EXTINF:0,Канал 3
+ext,Tecnotv Channel,http://tecnotv.info/tecnochannel.m3u8
+#EXTINF:0,Канал 4
+group,ENTRETENIMIENTO
+#EXTINF:0,Канал 5
+Antena3.ro,Antena 3 Internacional,http://a3live-lh.akamaihd.net:80/i/antena3_1@35248/master.m3u8
+#EXTINF:0,Канал 6
+ext,Sun Channel HD,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/SUN/tu1_manifest.m3u8?
+#EXTINF:0,Канал 7
+ext,Cosmovision,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/COSM/tu1_1.m3u8
+#EXTINF:0,Канал 8
+ext,Yes,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/YES/tu1_1.m3u8
+#EXTINF:0,Канал 9
+ext,Trendy Channel,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TREN/tu1_1.m3u8
+#EXTINF:0,Канал 10
+Quiero.ar,Mi musica,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/MMHD/tu1_1.m3u8
+#EXTINF:0,Канал 11
+ext,Teleantiquia,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TANT/tu1_1.m3u8
+#EXTINF:0,Канал 12
+ext,Tigo Music,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/MESH/tu1_1.m3u8
+#EXTINF:0,Канал 13
+ext,Televida,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TVID/tu1_1.m3u8
+#EXTINF:0,Канал 14
+ext,Cantinazo Tv,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/CANT/tu1_1.m3u8
+#EXTINF:0,Канал 15
+group,ESPAÑA
+#EXTINF:0,Канал 16
+ext,Antena 3 Esp,http://a3live-lh.akamaihd.net/i/antena3_1@35248/master.m3u8
+#EXTINF:0,Канал 17
+Atreseries.es,Atreseries,http://a3live-lh.akamaihd.net/i/a3shds/geoa3series_1@122775/master.m3u8
+#EXTINF:0,Канал 18
+LaSexta.sp,La Sexta,http://a3live-lh.akamaihd.net/i/lasexta_1@35272/master.m3u8
+#EXTINF:0,Канал 19
+mega,Mega,http://a3live-lh.akamaihd.net/i/mghds/geomega_1@328914/master.m3u8
+#EXTINF:0,Канал 20
+Neox.sp,Neox,http://a3live-lh.akamaihd.net/i/nxhds/geoneox_1@35261/master.m3u8
+#EXTINF:0,Канал 21
+NovaTV.cz,Nova,http://a3live-lh.akamaihd.net/i/nvhds/geonova_1@379404/master.m3u8
+#EXTINF:0,Канал 22
+group,ARGENTINA
+#EXTINF:0,Канал 23
+ext,Canal 10 Mar de Plata,http://ionlive1-lh.akamaihd.net/i/canal10_1@125367/master.m3u8
+#EXTINF:0,Канал 24
+ext,Orbe 21,http://urtmpkal-f.akamaihd.net/i/1b6mj17sk_1@308700/master.m3u8
+#EXTINF:0,Канал 25
+ext,Qm TV,http://qmnoticiashls-lh.akamaihd.net/i/qmnoticias_hls@324831/master.m3u8
+#EXTINF:0,Канал 26
+ext,Tec TV,http://tectvhls-lh.akamaihd.net/i/tectvHLS_1@334993/master.m3u8
+#EXTINF:0,Канал 27
+ext,TV Monde,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TV5/tu1_1.m3u8
+#EXTINF:0,Канал 28
+ext,Nueva Vida,http://stream.novotempo.com:1935/tv/tvnuevotiempo.stream/live.m3u8
+#EXTINF:0,Канал 29
+NASATV.us,Nasa TV,http://nasatv-lh.akamaihd.net/i/NASA_101@319270/master.m3u8?
+#EXTINF:0,Канал 30
+group,Colombia
+#EXTINF:0,Канал 31
+ext,Telemedellin,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TMED/tu1_1.m3u8?
+#EXTINF:0,Канал 32
+ext,Canal Antiestres,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/ANTI/tu1_1.m3u8
+#EXTINF:0,Канал 33
+discov_sci,Telecafe,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TCAF/tu1_1.m3u8?
+#EXTINF:0,Канал 34
+ext,Teleantioquia HD,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TANT/tu1_1.m3u8?
+#EXTINF:0,Канал 35
+ext,Ve plus TV,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/VMAS/tu1_1.m3u8?
+#EXTINF:0,Канал 36
+ext,CosmoVision,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/COSM/tu1_1.m3u8?
+#EXTINF:0,Канал 37
+ext,Tigo Music,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/MESH/tu1_1.m3u8
+#EXTINF:0,Канал 38
+ext,Trendy,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TREN/tu1_1.m3u8
+#EXTINF:0,Канал 39
+group,Chile
+#EXTINF:0,Канал 40
+Canal13.ar,Canal 13,http://13.live.cdn.cl/13hddesktop/13hd-1250.m3u8
+#EXTINF:0,Канал 41
+El13HD.ar,Canal 13 HD,http://13.live.cdn.cl/13hddesktop/13hd-1250.m3u8
+#EXTINF:0,Канал 42
+ext,Arica TV,http://wow2.cl.digitalproserver.com/aricatv/aricatvvivo/aricatv.smil/chunklist_w725671068_b848000.m3u8
+#EXTINF:0,Канал 43
+ext,Arica TV,-------
+#EXTINF:0,Канал 44
+ext,MVS NOTICIAS,http://wos1.smartcast.com.mx:1935/mvs/mvs_radio/mvs_radio.m3u8
+#EXTINF:0,Канал 45
+ext,EFEKTO TV,http://grupomac-lh.akamaihd.net:80/i/004rss0k8_1@301782/master.m3u8#IptvPlay
+#EXTINF:0,Канал 46
+ForoTV.mx,FORO TV,http://185417-f.akamaihd.net/i/n0tf0r0_1@81283/master.m3u8
+#EXTINF:0,Канал 47
+ext,Las estrellas,http://tvsawpdvr-lh.akamaihd.net/i/stch02wp_1@119660/index_1048_av-p.m3u8
+#EXTINF:0,Канал 48
+Azteca13.mx,Azteca 13,http://aztecalive-lh.akamaihd.net/i/0oxnvzh8a_1@175671/master.m3u8
+#EXTINF:0,Канал 49
+ext,AZTECA 13 (-30 MINUTOS),http://aztecalive-lh.akamaihd.net/i/0oxnvzh8a_1@175671/master.m3u8
+#EXTINF:0,Канал 50
+Azteca13.mx,AZTECA NOTICIAS,http://aztecalive-lh.akamaihd.net/i/0pd7p6ys0_1@175672/index_3_av-p.m3u8
+#EXTINF:0,Канал 51
+Proyecto40.mx,PROYECTO 40,http://urtmpkal-f.akamaihd.net/i/05i15qzql_1@149710/index_2_av-p.m3u8
+#EXTINF:0,Канал 52
+ext,CAPITAL 21 CDMX,http://187.237.253.94:8134/hls-live/livepkgr/_definst_/liveevent.m3u8
+#EXTINF:0,Канал 53
+ext,UNA VOZ CON TODOS HD,http://urtmpkal-f.akamaihd.net/i/0queot4rb_1@327205/master.m3u8
+#EXTINF:0,Канал 54
+Antena3.mx,Antena 3 Internacional,http://a3live-lh.akamaihd.net:80/i/antena3_1@35248/master.m3u8
+#EXTINF:0,Канал 55
+MultimediosMonterrey.mx,MULTIMEDIOS,http://play.gvstream.net:554/e-tv-video/default.stream/chunklist_w316615179.m3u8
+#EXTINF:0,Канал 56
+ext,Multimedios Mty,http://d34z3o74zqnctr.cloudfront.net/live-stream/57b4dbf5dbbfc8f16bb63ce1/publish/media_400.m3u8?dnt=true&ref=http%3A%2F%2Fwww.multimedios.com%2Ftv%2Fenvivo%2Fmonterrey&es=d34z3o74zqnctr.cloudfront.net&proto=http&time=1484723224640
+#EXTINF:0,Канал 57
+ext,Multimedios Mty,-------------
+#EXTINF:0,Канал 58
+Azteca13.mx,Azteca Noticias,http://sicoticoxw.com/LIVE/H01/CANAL2/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 59
+Azteca7.mx,Azteca 7 HD,http://sicoticoxw.com/LIVE/H01/CANAL7/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 60
+Azteca13.mx,Azteca Trece,http://sicoticoxw.com/LIVE/H01/CANAL13/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 61
+ext,Canal 40,http://sicoticoxw.com/LIVE/H01/CANAL40/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 62
+AZCorazon.cl,Azteca Corazon,http://sicoticoxw.com/LIVE/H01/CANAL45/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 63
+ext,Tele Novela,http://sicoticoxw.com/LIVE/H01/CANAL275/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 64
+CanalEstrellas.es,Canal de las estrellas,http://sicoticoxw.com/LIVE/H01/CANAL102/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 65
+ext,Canal de las estrella 2,http://tvsawpdvr-lh.akamaihd.net/i/stch02wp_1@119660/index_1048_av-p.m3u8
+#EXTINF:0,Канал 66
+Canal5.mx,Canal 5,http://sicoticoxw.com/LIVE/H01/CANAL105/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 67
+ext,Azteca Clic,http://sicoticoxw.com/LIVE/H01/CANAL103/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 68
+Galavision.us,Galavision,http://sicoticoxw.com/LIVE/H01/CANAL109/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 69
+OnceTV.mx,Canal Once,http://sicoticoxw.com/LIVE/H01/CANAL111/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 70
+MultimediosMonterrey.mx,Multimedios,http://sicoticoxw.com/LIVE/H01/CANAL167/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 71
+ext,Multimedios mas,http://play.gvstream.net:554/e-tv-video/default.stream/chunklist_w316615179.m3u8
+#EXTINF:0,Канал 72
+MultimediosMonterrey.mx,Multimedios HD,http://sicoticoxw.com/LIVE/H01/CANAL167/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 73
+24dok,TBS,http://sicoticoxw.com/LIVE/H01/CANAL273/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 74
+ext,CANAL 2 MISIONES (telefe),http://190.57.237.59/live/canal101010102.m3u8
+#EXTINF:0,Канал 75
+HolaTV.us,HOLA TV,http://191.101.228.168/tp.php/playlist.m3u8?id=1367
+#EXTINF:0,Канал 76
+UniMas.us,UNIMAS,https://video10-lax.streamup.com/app/unimas-1s-stream_aac/chunklist.m3u8?sd=10
+#EXTINF:0,Канал 77
+UnivisionEast.us,UNIVISION,https://video10-lax.streamup.com/app/anahix11s-stream-aac/chunklist.m3u8?sd=10
+#EXTINF:0,Канал 78
+ForoTV.mx,FORO TV,http://sicoticoxw.com/LIVE/H01/CANAL104/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 79
+Unicable.mx,UNICABLE,http://sicoticoxw.com/LIVE/H01/CANAL218/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 80
+Telemundo.mx,TELEMUNDO,http://mek4.mekstream.com/teleantillas/live3/playlist.m3u8
+#EXTINF:0,Канал 81
+fashion,FASHION TV,http://191.101.228.168/tp.php/playlist.m3u8?id=1371
+#EXTINF:0,Канал 82
+ext,MASCHIC,http://191.101.228.168/tp.php/playlist.m3u8?id=1375
+#EXTINF:0,Канал 83
+ElGourmet.mx,GOURMET,http://sicoticoxw.com/LIVE/H01/CANAL268/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 84
+ETV.gr,E,http://sicoticoxw.com/LIVE/H01/CANAL255/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 85
+MilenioTV.mx,Milenio,http://sicoticoxw.com/LIVE/H01/CANAL603/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 86
+disney,Disney Channel,http://sicoticoxw.com/LIVE/H01/CANAL312/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 87
+DisneyJr.pl,Disney JR,http://sicoticoxw.com/LIVE/H01/CANAL308/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 88
+DisneyXD.uk,Disney XD,http://sicoticoxw.com/LIVE/H01/CANAL322/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 89
+boomerang,Boomerang,http://sicoticoxw.com/LIVE/H01/CANAL324/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 90
+cartoon,Cartoon Network,http://sicoticoxw.com/LIVE/H01/CANAL320/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 91
+CBeebies.uk,Cbeebies,http://sicoticoxw.com/LIVE/H01/CANAL305/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 92
+DiscoveryKids.mx,Discovery Kids,http://sicoticoxw.com/LIVE/H01/CANAL303/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 93
+TIIN.mx,Tiin,http://sicoticoxw.com/LIVE/H01/CANAL325/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 94
+Tooncast.mx,Tooncast,http://sicoticoxw.com/LIVE/H01/CANAL328/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 95
+Nickelodeon.uk,Nick HD,http://sicoticoxw.com/LIVE/H01/CANAL315/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 96
+nickelodeon-rus,Nickelodeon,http://sicoticoxw.com/LIVE/H01/CANAL317/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 97
+nick-jr,Nick Jr,http://sicoticoxw.com/LIVE/H01/CANAL310/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 98
+Nicktoons.uk,Nicktoons,http://sicoticoxw.com/LIVE/H01/CANAL314/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 99
+ext,ClaroSports,http://jjoo2016ch01-hlsfix.clarovideo.com/Content/hls_clear/Live/Channel(jjoo2016ch01)/index.m3u8
+#EXTINF:0,Канал 100
+ext,Bein Sport Español,http://199.229.252.131:1935/live/CC-61EF4E52-363D-4995-C1F7-06514786346B-48568/master.m3u8
+#EXTINF:0,Канал 101
+ext,Tecnotv Sport,http://iphone-streaming.ustream.tv/uhls/22658398/streams/live/iphone/playlist.m3u8
+#EXTINF:0,Канал 102
+TDN.mx,TDN,http://209.126.124.25:8081/live/97/tdn@5u1/playlist.m3u8
+#EXTINF:0,Канал 103
+Eurosport1.uk,Eurosport Uk,http://esioslive6-i.akamaihd.net/hls/live/202874/AL_P_ESP1_INTER_ENG/playlist_1800.m3u8
+#EXTINF:0,Канал 104
+ext,Motor sport,http://motorsport.hopto.org:8080/
+#EXTINF:0,Канал 105
+RealMadridTV.sp,Real Madrid TV,http://rmtvlive-lh.akamaihd.net/i/rmtv_1@154306/index_1000_av-p.m3u8?sd=10&rebase=on
+#EXTINF:0,Канал 106
+NFLNetwork.mx,NFL Now,http://nflioslivesvg2-i.akamaihd.net/hls/live/221521/nflioslive/2015HackerNow_w99d9_g.m3u8
+#EXTINF:0,Канал 107
+RealMadridTV.sp,Real Madrid TV,http://rmtv24hweblive-lh.akamaihd.net/i/rmtv24hwebes_1@300661/index_3_av-p.m3u8
+#EXTINF:0,Канал 108
+AyMSports.mx,AyM Sports,http://190.57.234.166/V3/5/1.m3u8
+#EXTINF:0,Канал 109
+ext,Win Sports,http://lcdn.une.net.co/v1/AUTH_HLSLIVE/0001/tu1/yt1_1.m3u8
+#EXTINF:0,Канал 110
+ext,Poker Central,http://ooyalahd2-f.akamaihd.net/i/crtv01_delivery@329705/master.m3u8
+#EXTINF:0,Канал 111
+Eurosport1.uk,Euro Sports,http://esioslive6-i.akamaihd.net/hls/live/202874/AL_P_ESP1_INTER_ENG/playlist_1800.m3u8
+#EXTINF:0,Канал 112
+ext,Sevilla FC,http://sevillafc_live-lh.akamaihd.net/i/video_0@354142/master.m3u8#6
+#EXTINF:0,Канал 113
+ext,CDO PREMIUM,http://wow2.cl.digitalproserver.com/cdo/cdovivo/cdo.smil/chunklist_w913906597_b1064000.m3u8
+#EXTINF:0,Канал 114
+ext,PX,http://sicoticoxw.com/LIVE/H01/CANAL528/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 115
+ext,PX,https://pbs.twimg.com/profile_images/565552790559141888/6Er9L0J6.png",FORMULA 1
+#EXTINF:0,Канал 116
+ext,PX,http://sicoticoxw.com/LIVE/H01/CANAL511/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 117
+ESPN.uk,ESPN,http://sicoticoxw.com/LIVE/H01/CANAL558/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 118
+ESPN2.mx,ESPN 2,http://sicoticoxw.com/LIVE/H01/CANAL561/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 119
+ESPN3.mx,ESPN 3,http://sicoticoxw.com/LIVE/H01/CANAL520/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 120
+ESPNPlus.ar,ESPN +,http://sicoticoxw.com/LIVE/H01/CANAL516/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 121
+FoxSports.it,Fox Sports,http://sicoticoxw.com/LIVE/H01/CANAL522/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 122
+FoxSports2.mx,Fox Sports 2,http://sicoticoxw.com/LIVE/H01/CANAL527/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 123
+ext,Claro Sport 1,http://jjoo2016ch01-hlsfix.clarovideo.com/Content/hls_clear/Live/Channel(jjoo2016ch01)/index.m3u8
+#EXTINF:0,Канал 124
+ext,Claro Sport 1,------
+#EXTINF:0,Канал 125
+group,Deportes
+#EXTINF:0,Канал 126
+esp,EUROSPORT 1,http://81.7.13.162/hls/ss4/index.m3u8
+#EXTINF:0,Канал 127
+ext,Red Bull TV,http://q.gs:80/14608897/qcanal-436?USER=power-by-juan&PASS=stream.m3u8
+#EXTINF:0,Канал 128
+RealMadridTV.sp,Real Madrid TV,http://rmtvlive-lh.akamaihd.net/i/rmtv_1@154306/index_1000_av-p.m3u8?sd=10&rebase=on
+#EXTINF:0,Канал 129
+ext,ClaroSports,http://jjoo2016ch01-hlsfix.clarovideo.com/Content/hls_clear/Live/Channel(jjoo2016ch01)/index.m3u8
+#EXTINF:0,Канал 130
+DeporTV.ar,DXTV,http://186.33.227.198/DXTV/smil:DXTV.smil/playlist.m3u8
+#EXTINF:0,Канал 131
+DeporTV.ar,DEPORTV,http://190.57.234.164/V0/4/1.m3u8
+#EXTINF:0,Канал 132
+AyMSports.mx,AYM SPORTS,http://190.57.234.164/V0/5/1.m3u8
+#EXTINF:0,Канал 133
+AyMSports.mx,AM Sports,http://190.57.234.164/V3/5/1.m3u8
+#EXTINF:0,Канал 134
+fox-hd,FOX HD,http://sicoticoxw.com/LIVE/H01/CANAL201/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 135
+FXHD.mx,FX HD,http://sicoticoxw.com/LIVE/H01/CANAL209/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 136
+Fox1HD.mx,FOX 1 HD,http://sicoticoxw.com/LIVE/H01/CANAL415/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 137
+FoxActionHD.mx,FOX Action HD,http://sicoticoxw.com/LIVE/H01/CANAL416/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 138
+FOXmovies.svn,FOX Movies HD,http://sicoticoxw.com/LIVE/H01/CANAL417/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 139
+FoxCinema.mx,FOX Cinema,http://sicoticoxw.com/LIVE/H01/CANAL421/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 140
+FoxClassics.mx,FOX Classics,http://sicoticoxw.com/LIVE/H01/CANAL424/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 141
+fox-life,FOX Life,http://sicoticoxw.com/LIVE/H01/CANAL271/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 142
+WarnerChannel.mx,Warner Channel,http://sicoticoxw.com/LIVE/H01/CANAL205/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 143
+TruTVHD.mx,TruTV HD,http://sicoticoxw.com/LIVE/H01/CANAL215/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 144
+bbc-world,BBC,http://sicoticoxw.com/LIVE/H01/CANAL253/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 145
+Unicable.mx,Unicable,http://sicoticoxw.com/LIVE/H01/CANAL218/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 146
+Universal.de,Universal Channel HD,http://sicoticoxw.com/LIVE/H01/CANAL207/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 147
+Universal.uk,Universal Channel,http://sicoticoxw.com/LIVE/H01/CANAL256/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 148
+tlc-russia,TLC Discovery,http://sicoticoxw.com/LIVE/H01/CANAL386/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 149
+Tlnovelas.mx,Tlnovelas,http://sicoticoxw.com/LIVE/H01/CANAL275/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 150
+tnt,TNT,http://sicoticoxw.com/LIVE/H01/CANAL482/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 151
+tnt,TNT HD,http://sicoticoxw.com/LIVE/H01/CANAL435/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 152
+TNTSeries.cl,TNT Series,http://sicoticoxw.com/LIVE/H01/CANAL266/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 153
+TheFilmZoneHD.mx,Film Zone HD,http://sicoticoxw.com/LIVE/H01/CANAL440/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 154
+set,Sony HD,http://sicoticoxw.com/LIVE/H01/CANAL203/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 155
+Space.mx,Space,http://sicoticoxw.com/LIVE/H01/CANAL445/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 156
+SpaceHD.mx,Space HD,http://sicoticoxw.com/LIVE/H01/CANAL445/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 157
+StudioUniversal.it,Studio Universal,http://sicoticoxw.com/LIVE/H01/CANAL492/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 158
+SCIFI.uk,Syfy,http://sicoticoxw.com/LIVE/H01/CANAL257/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 159
+24dok,TBS,http://sicoticoxw.com/LIVE/H01/CANAL273/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 160
+TCM.uk,TCM,http://sicoticoxw.com/LIVE/H01/CANAL496/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 161
+Glitz.mx,Glitz,http://sicoticoxw.com/LIVE/H01/CANAL270/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 162
+GoldenHD.mx,Golden HD,http://sicoticoxw.com/LIVE/H01/CANAL436/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 163
+GoldenEdge.mx,Golden Edge,http://sicoticoxw.com/LIVE/H01/CANAL484/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 164
+DistritoComedia.mx,Distrito Comedia,http://sicoticoxw.com/LIVE/H01/CANAL272/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 165
+E.uk,E!,http://sicoticoxw.com/LIVE/H01/CANAL255/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 166
+CinecanalW.mx,Cinecanal,http://sicoticoxw.com/LIVE/H01/CANAL430/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 167
+Cinecanal+HD.cl,Cinecanal + HD,http://sicoticoxw.com/LIVE/H01/CANAL430/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 168
+CinemaxO.mx,Cinemax,http://sicoticoxw.com/LIVE/H01/CANAL481/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 169
+ComedyCentral.uk,Comedy Central,http://sicoticoxw.com/LIVE/H01/CANAL217/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 170
+DePeliculaHD.mx,De pelicula HD,http://sicoticoxw.com/LIVE/H01/CANAL442/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 171
+AyE.mx,A&E,http://sicoticoxw.com/LIVE/H01/CANAL211/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 172
+ext,AMC HDforo,http://sicoticoxw.com/LIVE/H01/CANAL444/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 173
+animal_rus,Animal Planet,http://sicoticoxw.com/LIVE/H01/CANAL373/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 174
+axn.pt,AXN HD,http://sicoticoxw.com/LIVE/H01/CANAL213/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 175
+Bandamax.mx,Bandamax,http://sicoticoxw.com/LIVE/H01/CANAL732/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 176
+mtv-rus,MTV,http://sicoticoxw.com/LIVE/H01/CANAL726/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 177
+mtvlive-hd,MTV Live,http://sicoticoxw.com/LIVE/H01/CANAL701/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 178
+RitmosonLatino.mx,Ritmoson,http://sicoticoxw.com/LIVE/H01/CANAL731/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 179
+Telehit.mx,Telehit,http://sicoticoxw.com/LIVE/H01/CANAL702/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 180
+vh1-europe,VH1,http://sicoticoxw.com/LIVE/H01/CANAL703/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 181
+VH1Classic.svn,VH1 Classics,http://sicoticoxw.com/LIVE/H01/CANAL728/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 182
+DiscoveryTheatreHD.ar,Discovery Theater,http://sicoticoxw.com/LIVE/H01/CANAL351/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 183
+natgeo,Nat Geo,http://sicoticoxw.com/LIVE/H01/CANAL377/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 184
+natgeowild,NatGeo Wild,http://sicoticoxw.com/LIVE/H01/CANAL355/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 185
+id-extra,Investigation Discovery,https://http://sicoticoxw.com/LIVE/H01/CANAL355/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 186
+Lifetime.uk,Lifetime,http://sicoticoxw.com/LIVE/H01/CANAL379/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 187
+HistoryHD.ru,History HD,http://sicoticoxw.com/LIVE/H01/CANAL353/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 188
+HomeandHealth.uk,Home And Health,http://sicoticoxw.com/LIVE/H01/CANAL374/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 189
+discov_rus,Discovery Channel,http://sicoticoxw.com/LIVE/H01/CANAL371/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 190
+DiscoveryCivil.mx,Discovery Civilization,http://sicoticoxw.com/LIVE/H01/CANAL382/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 191
+discov_sci,Discovery Science,http://sicoticoxw.com/LIVE/H01/CANAL381/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 192
+DiscoveryTurbo.uk,Discovery Turbo,http://sicoticoxw.com/LIVE/H01/CANAL383/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 193
+dtx,Discovery World,http://sicoticoxw.com/LIVE/H01/CANAL356/PROFILE5.m3u8?no=coke
+#EXTINF:0,Канал 194
+group,Videos
+#EXTINF:0,Канал 195
+avi,13/02/2017,http://tecnotv.info/live/error1.mp4
+#EXTINF:0,Канал 196
+
+
 #EXT-X-STREAM-INF:PROGRAM-ID=1, BANDWIDTH=311111
-gear2/prog_index.m3u8
+gear2/prog_index.m3u8#EXTM3U
+#EXTINF:0,group,Channels
+ext,Tecnotv hd,http://live.tvplayerlatino.com/usuarios/src1/fRonE/web/test.m3u8
+#EXTINF:0,ext,Tecnotv Channel,http://tecnotv.info/tecnochannel.m3u8
+group,ENTRETENIMIENTO
+#EXTINF:0,Antena3.ro,Antena 3 Internacional,http://a3live-lh.akamaihd.net:80/i/antena3_1@35248/master.m3u8
+ext,Sun Channel HD,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/SUN/tu1_manifest.m3u8?
+#EXTINF:0,ext,Cosmovision,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/COSM/tu1_1.m3u8
+ext,Yes,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/YES/tu1_1.m3u8
+#EXTINF:0,ext,Trendy Channel,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TREN/tu1_1.m3u8
+Quiero.ar,Mi musica,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/MMHD/tu1_1.m3u8
+#EXTINF:0,ext,Teleantiquia,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TANT/tu1_1.m3u8
+ext,Tigo Music,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/MESH/tu1_1.m3u8
+#EXTINF:0,ext,Televida,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TVID/tu1_1.m3u8
+ext,Cantinazo Tv,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/CANT/tu1_1.m3u8
+#EXTINF:0,group,ESPAÑA
+ext,Antena 3 Esp,http://a3live-lh.akamaihd.net/i/antena3_1@35248/master.m3u8
+#EXTINF:0,Atreseries.es,Atreseries,http://a3live-lh.akamaihd.net/i/a3shds/geoa3series_1@122775/master.m3u8
+LaSexta.sp,La Sexta,http://a3live-lh.akamaihd.net/i/lasexta_1@35272/master.m3u8
+#EXTINF:0,mega,Mega,http://a3live-lh.akamaihd.net/i/mghds/geomega_1@328914/master.m3u8
+Neox.sp,Neox,http://a3live-lh.akamaihd.net/i/nxhds/geoneox_1@35261/master.m3u8
+#EXTINF:0,NovaTV.cz,Nova,http://a3live-lh.akamaihd.net/i/nvhds/geonova_1@379404/master.m3u8
+group,ARGENTINA
+#EXTINF:0,ext,Canal 10 Mar de Plata,http://ionlive1-lh.akamaihd.net/i/canal10_1@125367/master.m3u8
+ext,Orbe 21,http://urtmpkal-f.akamaihd.net/i/1b6mj17sk_1@308700/master.m3u8
+#EXTINF:0,ext,Qm TV,http://qmnoticiashls-lh.akamaihd.net/i/qmnoticias_hls@324831/master.m3u8
+ext,Tec TV,http://tectvhls-lh.akamaihd.net/i/tectvHLS_1@334993/master.m3u8
+#EXTINF:0,ext,TV Monde,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TV5/tu1_1.m3u8
+ext,Nueva Vida,http://stream.novotempo.com:1935/tv/tvnuevotiempo.stream/live.m3u8
+#EXTINF:0,NASATV.us,Nasa TV,http://nasatv-lh.akamaihd.net/i/NASA_101@319270/master.m3u8?
+group,Colombia
+#EXTINF:0,ext,Telemedellin,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TMED/tu1_1.m3u8?
+ext,Canal Antiestres,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/ANTI/tu1_1.m3u8
+#EXTINF:0,discov_sci,Telecafe,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TCAF/tu1_1.m3u8?
+ext,Teleantioquia HD,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TANT/tu1_1.m3u8?
+#EXTINF:0,ext,Ve plus TV,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/VMAS/tu1_1.m3u8?
+ext,CosmoVision,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/COSM/tu1_1.m3u8?
+#EXTINF:0,ext,Tigo Music,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/MESH/tu1_1.m3u8
+ext,Trendy,http://hlslive.lcdn.une.net.co/v1/AUTH_HLSLIVE/TREN/tu1_1.m3u8
+#EXTINF:0,group,Chile
+Canal13.ar,Canal 13,http://13.live.cdn.cl/13hddesktop/13hd-1250.m3u8
+#EXTINF:0,El13HD.ar,Canal 13 HD,http://13.live.cdn.cl/13hddesktop/13hd-1250.m3u8
+ext,Arica TV,http://wow2.cl.digitalproserver.com/aricatv/aricatvvivo/aricatv.smil/chunklist_w725671068_b848000.m3u8
+#EXTINF:0,ext,Arica TV,-------
+ext,MVS NOTICIAS,http://wos1.smartcast.com.mx:1935/mvs/mvs_radio/mvs_radio.m3u8
+#EXTINF:0,ext,EFEKTO TV,http://grupomac-lh.akamaihd.net:80/i/004rss0k8_1@301782/master.m3u8#IptvPlay
+ForoTV.mx,FORO TV,http://185417-f.akamaihd.net/i/n0tf0r0_1@81283/master.m3u8
+#EXTINF:0,ext,Las estrellas,http://tvsawpdvr-lh.akamaihd.net/i/stch02wp_1@119660/index_1048_av-p.m3u8
+Azteca13.mx,Azteca 13,http://aztecalive-lh.akamaihd.net/i/0oxnvzh8a_1@175671/master.m3u8
+#EXTINF:0,ext,AZTECA 13 (-30 MINUTOS),http://aztecalive-lh.akamaihd.net/i/0oxnvzh8a_1@175671/master.m3u8
+Azteca13.mx,AZTECA NOTICIAS,http://aztecalive-lh.akamaihd.net/i/0pd7p6ys0_1@175672/index_3_av-p.m3u8
+#EXTINF:0,Proyecto40.mx,PROYECTO 40,http://urtmpkal-f.akamaihd.net/i/05i15qzql_1@149710/index_2_av-p.m3u8
+ext,CAPITAL 21 CDMX,http://187.237.253.94:8134/hls-live/livepkgr/_definst_/liveevent.m3u8
+#EXTINF:0,ext,UNA VOZ CON TODOS HD,http://urtmpkal-f.akamaihd.net/i/0queot4rb_1@327205/master.m3u8
+Antena3.mx,Antena 3 Internacional,http://a3live-lh.akamaihd.net:80/i/antena3_1@35248/master.m3u8
+#EXTINF:0,MultimediosMonterrey.mx,MULTIMEDIOS,http://play.gvstream.net:554/e-tv-video/default.stream/chunklist_w316615179.m3u8
+ext,Multimedios Mty,http://d34z3o74zqnctr.cloudfront.net/live-stream/57b4dbf5dbbfc8f16bb63ce1/publish/media_400.m3u8?dnt=true&ref=http%3A%2F%2Fwww.multimedios.com%2Ftv%2Fenvivo%2Fmonterrey&es=d34z3o74zqnctr.cloudfront.net&proto=http&time=1484723224640
+#EXTINF:0,ext,Multimedios Mty,-------------
+Azteca13.mx,Azteca Noticias,http://sicoticoxw.com/LIVE/H01/CANAL2/PROFILE5.m3u8?no=coke
+#EXTINF:0,Azteca7.mx,Azteca 7 HD,http://sicoticoxw.com/LIVE/H01/CANAL7/PROFILE5.m3u8?no=coke
+Azteca13.mx,Azteca Trece,http://sicoticoxw.com/LIVE/H01/CANAL13/PROFILE5.m3u8?no=coke
+#EXTINF:0,ext,Canal 40,http://sicoticoxw.com/LIVE/H01/CANAL40/PROFILE5.m3u8?no=coke
+AZCorazon.cl,Azteca Corazon,http://sicoticoxw.com/LIVE/H01/CANAL45/PROFILE5.m3u8?no=coke
+#EXTINF:0,ext,Tele Novela,http://sicoticoxw.com/LIVE/H01/CANAL275/PROFILE5.m3u8?no=coke
+CanalEstrellas.es,Canal de las estrellas,http://sicoticoxw.com/LIVE/H01/CANAL102/PROFILE5.m3u8?no=coke
+#EXTINF:0,ext,Canal de las estrella 2,http://tvsawpdvr-lh.akamaihd.net/i/stch02wp_1@119660/index_1048_av-p.m3u8
+Canal5.mx,Canal 5,http://sicoticoxw.com/LIVE/H01/CANAL105/PROFILE5.m3u8?no=coke
+#EXTINF:0,ext,Azteca Clic,http://sicoticoxw.com/LIVE/H01/CANAL103/PROFILE5.m3u8?no=coke
+Galavision.us,Galavision,http://sicoticoxw.com/LIVE/H01/CANAL109/PROFILE5.m3u8?no=coke
+#EXTINF:0,OnceTV.mx,Canal Once,http://sicoticoxw.com/LIVE/H01/CANAL111/PROFILE5.m3u8?no=coke
+MultimediosMonterrey.mx,Multimedios,http://sicoticoxw.com/LIVE/H01/CANAL167/PROFILE5.m3u8?no=coke
+#EXTINF:0,ext,Multimedios mas,http://play.gvstream.net:554/e-tv-video/default.stream/chunklist_w316615179.m3u8
+MultimediosMonterrey.mx,Multimedios HD,http://sicoticoxw.com/LIVE/H01/CANAL167/PROFILE5.m3u8?no=coke
+#EXTINF:0,24dok,TBS,http://sicoticoxw.com/LIVE/H01/CANAL273/PROFILE5.m3u8?no=coke
+ext,CANAL 2 MISIONES (telefe),http://190.57.237.59/live/canal101010102.m3u8
+#EXTINF:0,HolaTV.us,HOLA TV,http://191.101.228.168/tp.php/playlist.m3u8?id=1367
+UniMas.us,UNIMAS,https://video10-lax.streamup.com/app/unimas-1s-stream_aac/chunklist.m3u8?sd=10
+#EXTINF:0,UnivisionEast.us,UNIVISION,https://video10-lax.streamup.com/app/anahix11s-stream-aac/chunklist.m3u8?sd=10
+ForoTV.mx,FORO TV,http://sicoticoxw.com/LIVE/H01/CANAL104/PROFILE5.m3u8?no=coke
+#EXTINF:0,Unicable.mx,UNICABLE,http://sicoticoxw.com/LIVE/H01/CANAL218/PROFILE5.m3u8?no=coke
+Telemundo.mx,TELEMUNDO,http://mek4.mekstream.com/teleantillas/live3/playlist.m3u8
+#EXTINF:0,fashion,FASHION TV,http://191.101.228.168/tp.php/playlist.m3u8?id=1371
+ext,MASCHIC,http://191.101.228.168/tp.php/playlist.m3u8?id=1375
+#EXTINF:0,ElGourmet.mx,GOURMET,http://sicoticoxw.com/LIVE/H01/CANAL268/PROFILE5.m3u8?no=coke
+ETV.gr,E,http://sicoticoxw.com/LIVE/H01/CANAL255/PROFILE5.m3u8?no=coke
+#EXTINF:0,MilenioTV.mx,Milenio,http://sicoticoxw.com/LIVE/H01/CANAL603/PROFILE5.m3u8?no=coke
+disney,Disney Channel,http://sicoticoxw.com/LIVE/H01/CANAL312/PROFILE5.m3u8?no=coke
+#EXTINF:0,DisneyJr.pl,Disney JR,http://sicoticoxw.com/LIVE/H01/CANAL308/PROFILE5.m3u8?no=coke
+DisneyXD.uk,Disney XD,http://sicoticoxw.com/LIVE/H01/CANAL322/PROFILE5.m3u8?no=coke
+#EXTINF:0,boomerang,Boomerang,http://sicoticoxw.com/LIVE/H01/CANAL324/PROFILE5.m3u8?no=coke
+cartoon,Cartoon Network,http://sicoticoxw.com/LIVE/H01/CANAL320/PROFILE5.m3u8?no=coke
+#EXTINF:0,CBeebies.uk,Cbeebies,http://sicoticoxw.com/LIVE/H01/CANAL305/PROFILE5.m3u8?no=coke
+DiscoveryKids.mx,Discovery Kids,http://sicoticoxw.com/LIVE/H01/CANAL303/PROFILE5.m3u8?no=coke
+#EXTINF:0,TIIN.mx,Tiin,http://sicoticoxw.com/LIVE/H01/CANAL325/PROFILE5.m3u8?no=coke
+Tooncast.mx,Tooncast,http://sicoticoxw.com/LIVE/H01/CANAL328/PROFILE5.m3u8?no=coke
+#EXTINF:0,Nickelodeon.uk,Nick HD,http://sicoticoxw.com/LIVE/H01/CANAL315/PROFILE5.m3u8?no=coke
+nickelodeon-rus,Nickelodeon,http://sicoticoxw.com/LIVE/H01/CANAL317/PROFILE5.m3u8?no=coke
+#EXTINF:0,nick-jr,Nick Jr,http://sicoticoxw.com/LIVE/H01/CANAL310/PROFILE5.m3u8?no=coke
+Nicktoons.uk,Nicktoons,http://sicoticoxw.com/LIVE/H01/CANAL314/PROFILE5.m3u8?no=coke
+#EXTINF:0,ext,ClaroSports,http://jjoo2016ch01-hlsfix.clarovideo.com/Content/hls_clear/Live/Channel(jjoo2016ch01)/index.m3u8
+ext,Bein Sport Español,http://199.229.252.131:1935/live/CC-61EF4E52-363D-4995-C1F7-06514786346B-48568/master.m3u8
+#EXTINF:0,ext,Tecnotv Sport,http://iphone-streaming.ustream.tv/uhls/22658398/streams/live/iphone/playlist.m3u8
+TDN.mx,TDN,http://209.126.124.25:8081/live/97/tdn@5u1/playlist.m3u8
+#EXTINF:0,Eurosport1.uk,Eurosport Uk,http://esioslive6-i.akamaihd.net/hls/live/202874/AL_P_ESP1_INTER_ENG/playlist_1800.m3u8
+ext,Motor sport,http://motorsport.hopto.org:8080/
+#EXTINF:0,RealMadridTV.sp,Real Madrid TV,http://rmtvlive-lh.akamaihd.net/i/rmtv_1@154306/index_1000_av-p.m3u8?sd=10&rebase=on
+NFLNetwork.mx,NFL Now,http://nflioslivesvg2-i.akamaihd.net/hls/live/221521/nflioslive/2015HackerNow_w99d9_g.m3u8
+#EXTINF:0,RealMadridTV.sp,Real Madrid TV,http://rmtv24hweblive-lh.akamaihd.net/i/rmtv24hwebes_1@300661/index_3_av-p.m3u8
+AyMSports.mx,AyM Sports,http://190.57.234.166/V3/5/1.m3u8
+#EXTINF:0,ext,Win Sports,http://lcdn.une.net.co/v1/AUTH_HLSLIVE/0001/tu1/yt1_1.m3u8
+ext,Poker Central,http://ooyalahd2-f.akamaihd.net/i/crtv01_delivery@329705/master.m3u8
+#EXTINF:0,Eurosport1.uk,Euro Sports,http://esioslive6-i.akamaihd.net/hls/live/202874/AL_P_ESP1_INTER_ENG/playlist_1800.m3u8
+ext,Sevilla FC,http://sevillafc_live-lh.akamaihd.net/i/video_0@354142/master.m3u8#6
+#EXTINF:0,ext,CDO PREMIUM,http://wow2.cl.digitalproserver.com/cdo/cdovivo/cdo.smil/chunklist_w913906597_b1064000.m3u8
+ext,PX,http://sicoticoxw.com/LIVE/H01/CANAL528/PROFILE5.m3u8?no=coke
+#EXTINF:0,ext,PX,https://pbs.twimg.com/profile_images/565552790559141888/6Er9L0J6.png",FORMULA 1
+ext,PX,http://sicoticoxw.com/LIVE/H01/CANAL511/PROFILE5.m3u8?no=coke
+#EXTINF:0,ESPN.uk,ESPN,http://sicoticoxw.com/LIVE/H01/CANAL558/PROFILE5.m3u8?no=coke
+ESPN2.mx,ESPN 2,http://sicoticoxw.com/LIVE/H01/CANAL561/PROFILE5.m3u8?no=coke
+#EXTINF:0,ESPN3.mx,ESPN 3,http://sicoticoxw.com/LIVE/H01/CANAL520/PROFILE5.m3u8?no=coke
+ESPNPlus.ar,ESPN +,http://sicoticoxw.com/LIVE/H01/CANAL516/PROFILE5.m3u8?no=coke
+#EXTINF:0,FoxSports.it,Fox Sports,http://sicoticoxw.com/LIVE/H01/CANAL522/PROFILE5.m3u8?no=coke
+FoxSports2.mx,Fox Sports 2,http://sicoticoxw.com/LIVE/H01/CANAL527/PROFILE5.m3u8?no=coke
+#EXTINF:0,ext,Claro Sport 1,http://jjoo2016ch01-hlsfix.clarovideo.com/Content/hls_clear/Live/Channel(jjoo2016ch01)/index.m3u8
+ext,Claro Sport 1,------
+#EXTINF:0,group,Deportes
+esp,EUROSPORT 1,http://81.7.13.162/hls/ss4/index.m3u8
+#EXTINF:0,ext,Red Bull TV,http://q.gs:80/14608897/qcanal-436?USER=power-by-juan&PASS=stream.m3u8
+RealMadridTV.sp,Real Madrid TV,http://rmtvlive-lh.akamaihd.net/i/rmtv_1@154306/index_1000_av-p.m3u8?sd=10&rebase=on
+#EXTINF:0,ext,ClaroSports,http://jjoo2016ch01-hlsfix.clarovideo.com/Content/hls_clear/Live/Channel(jjoo2016ch01)/index.m3u8
+DeporTV.ar,DXTV,http://186.33.227.198/DXTV/smil:DXTV.smil/playlist.m3u8
+#EXTINF:0,DeporTV.ar,DEPORTV,http://190.57.234.164/V0/4/1.m3u8
+AyMSports.mx,AYM SPORTS,http://190.57.234.164/V0/5/1.m3u8
+#EXTINF:0,AyMSports.mx,AM Sports,http://190.57.234.164/V3/5/1.m3u8
+fox-hd,FOX HD,http://sicoticoxw.com/LIVE/H01/CANAL201/PROFILE5.m3u8?no=coke
+#EXTINF:0,FXHD.mx,FX HD,http://sicoticoxw.com/LIVE/H01/CANAL209/PROFILE5.m3u8?no=coke
+Fox1HD.mx,FOX 1 HD,http://sicoticoxw.com/LIVE/H01/CANAL415/PROFILE5.m3u8?no=coke
+#EXTINF:0,FoxActionHD.mx,FOX Action HD,http://sicoticoxw.com/LIVE/H01/CANAL416/PROFILE5.m3u8?no=coke
+FOXmovies.svn,FOX Movies HD,http://sicoticoxw.com/LIVE/H01/CANAL417/PROFILE5.m3u8?no=coke
+#EXTINF:0,FoxCinema.mx,FOX Cinema,http://sicoticoxw.com/LIVE/H01/CANAL421/PROFILE5.m3u8?no=coke
+FoxClassics.mx,FOX Classics,http://sicoticoxw.com/LIVE/H01/CANAL424/PROFILE5.m3u8?no=coke
+#EXTINF:0,fox-life,FOX Life,http://sicoticoxw.com/LIVE/H01/CANAL271/PROFILE5.m3u8?no=coke
+WarnerChannel.mx,Warner Channel,http://sicoticoxw.com/LIVE/H01/CANAL205/PROFILE5.m3u8?no=coke
+#EXTINF:0,TruTVHD.mx,TruTV HD,http://sicoticoxw.com/LIVE/H01/CANAL215/PROFILE5.m3u8?no=coke
+bbc-world,BBC,http://sicoticoxw.com/LIVE/H01/CANAL253/PROFILE5.m3u8?no=coke
+#EXTINF:0,Unicable.mx,Unicable,http://sicoticoxw.com/LIVE/H01/CANAL218/PROFILE5.m3u8?no=coke
+Universal.de,Universal Channel HD,http://sicoticoxw.com/LIVE/H01/CANAL207/PROFILE5.m3u8?no=coke
+#EXTINF:0,Universal.uk,Universal Channel,http://sicoticoxw.com/LIVE/H01/CANAL256/PROFILE5.m3u8?no=coke
+tlc-russia,TLC Discovery,http://sicoticoxw.com/LIVE/H01/CANAL386/PROFILE5.m3u8?no=coke
+#EXTINF:0,Tlnovelas.mx,Tlnovelas,http://sicoticoxw.com/LIVE/H01/CANAL275/PROFILE5.m3u8?no=coke
+tnt,TNT,http://sicoticoxw.com/LIVE/H01/CANAL482/PROFILE5.m3u8?no=coke
+#EXTINF:0,tnt,TNT HD,http://sicoticoxw.com/LIVE/H01/CANAL435/PROFILE5.m3u8?no=coke
+TNTSeries.cl,TNT Series,http://sicoticoxw.com/LIVE/H01/CANAL266/PROFILE5.m3u8?no=coke
+#EXTINF:0,TheFilmZoneHD.mx,Film Zone HD,http://sicoticoxw.com/LIVE/H01/CANAL440/PROFILE5.m3u8?no=coke
+set,Sony HD,http://sicoticoxw.com/LIVE/H01/CANAL203/PROFILE5.m3u8?no=coke
+#EXTINF:0,Space.mx,Space,http://sicoticoxw.com/LIVE/H01/CANAL445/PROFILE5.m3u8?no=coke
+SpaceHD.mx,Space HD,http://sicoticoxw.com/LIVE/H01/CANAL445/PROFILE5.m3u8?no=coke
+#EXTINF:0,StudioUniversal.it,Studio Universal,http://sicoticoxw.com/LIVE/H01/CANAL492/PROFILE5.m3u8?no=coke
+SCIFI.uk,Syfy,http://sicoticoxw.com/LIVE/H01/CANAL257/PROFILE5.m3u8?no=coke
+#EXTINF:0,24dok,TBS,http://sicoticoxw.com/LIVE/H01/CANAL273/PROFILE5.m3u8?no=coke
+TCM.uk,TCM,http://sicoticoxw.com/LIVE/H01/CANAL496/PROFILE5.m3u8?no=coke
+#EXTINF:0,Glitz.mx,Glitz,http://sicoticoxw.com/LIVE/H01/CANAL270/PROFILE5.m3u8?no=coke
+GoldenHD.mx,Golden HD,http://sicoticoxw.com/LIVE/H01/CANAL436/PROFILE5.m3u8?no=coke
+#EXTINF:0,GoldenEdge.mx,Golden Edge,http://sicoticoxw.com/LIVE/H01/CANAL484/PROFILE5.m3u8?no=coke
+DistritoComedia.mx,Distrito Comedia,http://sicoticoxw.com/LIVE/H01/CANAL272/PROFILE5.m3u8?no=coke
+#EXTINF:0,E.uk,E!,http://sicoticoxw.com/LIVE/H01/CANAL255/PROFILE5.m3u8?no=coke
+CinecanalW.mx,Cinecanal,http://sicoticoxw.com/LIVE/H01/CANAL430/PROFILE5.m3u8?no=coke
+#EXTINF:0,Cinecanal+HD.cl,Cinecanal + HD,http://sicoticoxw.com/LIVE/H01/CANAL430/PROFILE5.m3u8?no=coke
+CinemaxO.mx,Cinemax,http://sicoticoxw.com/LIVE/H01/CANAL481/PROFILE5.m3u8?no=coke
+#EXTINF:0,ComedyCentral.uk,Comedy Central,http://sicoticoxw.com/LIVE/H01/CANAL217/PROFILE5.m3u8?no=coke
+DePeliculaHD.mx,De pelicula HD,http://sicoticoxw.com/LIVE/H01/CANAL442/PROFILE5.m3u8?no=coke
+#EXTINF:0,AyE.mx,A&E,http://sicoticoxw.com/LIVE/H01/CANAL211/PROFILE5.m3u8?no=coke
+ext,AMC HDforo,http://sicoticoxw.com/LIVE/H01/CANAL444/PROFILE5.m3u8?no=coke
+#EXTINF:0,animal_rus,Animal Planet,http://sicoticoxw.com/LIVE/H01/CANAL373/PROFILE5.m3u8?no=coke
+axn.pt,AXN HD,http://sicoticoxw.com/LIVE/H01/CANAL213/PROFILE5.m3u8?no=coke
+#EXTINF:0,Bandamax.mx,Bandamax,http://sicoticoxw.com/LIVE/H01/CANAL732/PROFILE5.m3u8?no=coke
+mtv-rus,MTV,http://sicoticoxw.com/LIVE/H01/CANAL726/PROFILE5.m3u8?no=coke
+#EXTINF:0,mtvlive-hd,MTV Live,http://sicoticoxw.com/LIVE/H01/CANAL701/PROFILE5.m3u8?no=coke
+RitmosonLatino.mx,Ritmoson,http://sicoticoxw.com/LIVE/H01/CANAL731/PROFILE5.m3u8?no=coke
+#EXTINF:0,Telehit.mx,Telehit,http://sicoticoxw.com/LIVE/H01/CANAL702/PROFILE5.m3u8?no=coke
+vh1-europe,VH1,http://sicoticoxw.com/LIVE/H01/CANAL703/PROFILE5.m3u8?no=coke
+#EXTINF:0,VH1Classic.svn,VH1 Classics,http://sicoticoxw.com/LIVE/H01/CANAL728/PROFILE5.m3u8?no=coke
+DiscoveryTheatreHD.ar,Discovery Theater,http://sicoticoxw.com/LIVE/H01/CANAL351/PROFILE5.m3u8?no=coke
+#EXTINF:0,natgeo,Nat Geo,http://sicoticoxw.com/LIVE/H01/CANAL377/PROFILE5.m3u8?no=coke
+natgeowild,NatGeo Wild,http://sicoticoxw.com/LIVE/H01/CANAL355/PROFILE5.m3u8?no=coke
+#EXTINF:0,id-extra,Investigation Discovery,https://http://sicoticoxw.com/LIVE/H01/CANAL355/PROFILE5.m3u8?no=coke
+Lifetime.uk,Lifetime,http://sicoticoxw.com/LIVE/H01/CANAL379/PROFILE5.m3u8?no=coke
+#EXTINF:0,HistoryHD.ru,History HD,http://sicoticoxw.com/LIVE/H01/CANAL353/PROFILE5.m3u8?no=coke
+HomeandHealth.uk,Home And Health,http://sicoticoxw.com/LIVE/H01/CANAL374/PROFILE5.m3u8?no=coke
+#EXTINF:0,discov_rus,Discovery Channel,http://sicoticoxw.com/LIVE/H01/CANAL371/PROFILE5.m3u8?no=coke
+DiscoveryCivil.mx,Discovery Civilization,http://sicoticoxw.com/LIVE/H01/CANAL382/PROFILE5.m3u8?no=coke
+#EXTINF:0,discov_sci,Discovery Science,http://sicoticoxw.com/LIVE/H01/CANAL381/PROFILE5.m3u8?no=coke
+DiscoveryTurbo.uk,Discovery Turbo,http://sicoticoxw.com/LIVE/H01/CANAL383/PROFILE5.m3u8?no=coke
+#EXTINF:0,dtx,Discovery World,http://sicoticoxw.com/LIVE/H01/CANAL356/PROFILE5.m3u8?no=coke
+group,Videos
+#EXTINF:0,avi,13/02/2017,http://tecnotv.info/live/error1.mp4
+
+
 #EXT-X-STREAM-INF:PROGRAM-ID=1, BANDWIDTH=484444
 gear3/prog_index.m3u8
 #EXT-X-STREAM-INF:PROGRAM-ID=1, BANDWIDTH=737777
