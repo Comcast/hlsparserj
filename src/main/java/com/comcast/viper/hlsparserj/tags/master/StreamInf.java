@@ -119,7 +119,7 @@ public class StreamInf extends Tag {
     private static final String RESOLUTION = "RESOLUTION";
     private static final String AUDIO = "AUDIO";
     private static final String VIDEO = "VIDEO";
-    private static final String SUBTITLE = "SUBTITLE";
+    private static final String SUBTITLE = "SUBTITLES";
     private static final String CLOSEDCAPTIONS = "CLOSEDCAPTIONS";
 
     /**
