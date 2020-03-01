@@ -15,6 +15,9 @@
  */
 package com.comcast.viper.hlsparserj.tags;
 
+import java.io.IOException;
+import java.io.StreamTokenizer;
+import java.io.StringReader;
 import java.util.HashMap;
 import java.util.Map;
 import java.util.regex.Matcher;
@@ -26,7 +29,6 @@ import java.util.regex.Pattern;
 public class UnparsedTag {
 
     private static final Pattern TAGPATTERN = Pattern.compile("^#(EXT.*?):(.*)");
-    private static final String NONENCLOSEDQUOTES = ",(?=([^\"]*\"[^\"]*\")*[^\"]*$)";
     private static final String URI_ATTR = "URI";
 
     private String tagName;
@@ -119,28 +121,45 @@ public class UnparsedTag {
             tagName = lineMatcher.group(1);
 
             final String attributeList = lineMatcher.group(2);
+
+            final StreamTokenizer tokenizer = new StreamTokenizer(new StringReader(attributeList));
+            tokenizer.resetSyntax();
+            tokenizer.wordChars(' ', 255);
+            tokenizer.quoteChar('"');
+            tokenizer.ordinaryChar(',');
+            tokenizer.ordinaryChar('=');
+
+            String attributeName = null;
+            String attributeValue = null;
             int noNameCount = 0;
-            // We only want to split on comma's that are not enclosed in quotes,
-            // because some individual attributes
-            // can themselves be comma delimited lists. For example, CODECS is
-            // often a comman delimited list
-            for (String attribute : attributeList.split(NONENCLOSEDQUOTES)) {
-                final String[] nameValuePair = attribute.split("=");
-                if (nameValuePair.length == 1) {
-                    // If there was no "=", then the attribute is only a single
-                    // value, not a list. For example,
-                    // EXT-X-VERSION is only a single attribute.
-                    //
-                    // Remove surrounding double quotes from the attribute value
-                    attributes.put("NONAME" + noNameCount,
-                            nameValuePair[0].replaceAll("^\"|\"$", ""));
-                } else {
-                    // Remove surrounding double quotes from the attribute value
-                    attributes.put(nameValuePair[0].trim(),
-                            nameValuePair[1].replaceAll("^\"|\"$", ""));
+            do {
+                int ttype;
+                try {
+                    ttype = tokenizer.nextToken();
+                } catch (IOException e) {
+                    // Should never get here because reading from String
+                    throw new IllegalStateException(e);
                 }
-                noNameCount++;
-            }
+
+                if (ttype == ',' || ttype == StreamTokenizer.TT_EOF) {
+                    if (attributeValue == null) {
+                        // Not actually an attribute - just a single value
+                        attributes.put("NONAME" + noNameCount, attributeName);
+                        noNameCount++;
+                        attributeName = null;
+                    } else {
+                        attributes.put(attributeName, attributeValue);
+                        attributeName = null;
+                        attributeValue = null;
+                    }
+                } else if (ttype == StreamTokenizer.TT_WORD || ttype == '"') {
+                    if (attributeName == null) {
+                        attributeName = tokenizer.sval;
+                    } else {
+                        attributeValue = tokenizer.sval;
+                    }
+                }
+            } while (tokenizer.ttype != StreamTokenizer.TT_EOF);
 
             // Set the URI if a URI attribute is present
             if (attributes.containsKey(URI_ATTR)) {
