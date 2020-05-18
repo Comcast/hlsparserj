@@ -1,12 +1,52 @@
-*~
-.DS_Store
-.classpath
-.eclipse
-.metadata
-.project
-.settings
-RemoteSystemsTempFiles
+# Ignore Gradle project-specific cache directory
+.gradle
+build
+
+# Built application files
+*.apk
+*.ap_
+*.aab
+
+# ART/Dalvik
+*.dex
+
+# Java
+*.class
+
+# Generated
 bin
-target
-.idea
+gen
+out
+release
+
+# MacOS
+.DS_Store
+
+# Local configuration file (sdk path, etc)
+local.properties
+
+# Generated Proguard
+proguard
+
+# Log Files
+*.log
+
+# Android Studio
+.navigation
+captures
+
+# IntelliJ
 *.iml
+.idea
+
+# Visual Studio
+.vscode
+
+# External native build folder generated in Android Studio 2.2 and later
+.externalNativeBuild
+
+# lint
+lint/intermediates
+lint/generated
+lint/outputs
+lint/tmp
