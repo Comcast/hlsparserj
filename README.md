@@ -6,6 +6,9 @@
 
 http://tools.ietf.org/html/draft-pantos-http-live-streaming-12 
 
+## Documentation
+
+https://re-android.s3.amazonaws.com/doc/hlsparserj/index.html
 
 ## Examples
 
