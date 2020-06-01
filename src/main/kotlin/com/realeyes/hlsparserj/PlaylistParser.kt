@@ -86,11 +86,9 @@ class PlaylistParser {
         val isReader = InputStreamReader(playlistStream)
         val bufReader = BufferedReader(isReader)
         var lastTag: UnparsedTag? = null
-//        var line: String
         bufReader.forEachLine {
             lastTag = processLine(it, lastTag)
         }
-//        while (bufReader.readLine().also { line = it } != null) lastTag = processLine(line, lastTag)
     }
 
     /**

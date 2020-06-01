@@ -18,21 +18,14 @@ import com.realeyes.hlsparserj.tags.Tag
 import com.realeyes.hlsparserj.tags.TagFactory
 import com.realeyes.hlsparserj.tags.TagNames
 import com.realeyes.hlsparserj.tags.UnparsedTag
-import com.realeyes.hlsparserj.tags.media.AllowCache
-import com.realeyes.hlsparserj.tags.media.Asset
-import com.realeyes.hlsparserj.tags.media.ByteRange
-import com.realeyes.hlsparserj.tags.media.Cue
-import com.realeyes.hlsparserj.tags.media.CueOut
-import com.realeyes.hlsparserj.tags.media.CueOutCont
-import com.realeyes.hlsparserj.tags.media.DiscontinuitySequence
-import com.realeyes.hlsparserj.tags.media.ExtInf
-import com.realeyes.hlsparserj.tags.media.Key
-import com.realeyes.hlsparserj.tags.media.MediaSequence
-import com.realeyes.hlsparserj.tags.media.PlaylistType
-import com.realeyes.hlsparserj.tags.media.SCTE35
-import com.realeyes.hlsparserj.tags.media.Segment
-import com.realeyes.hlsparserj.tags.media.SegmentMap
-import com.realeyes.hlsparserj.tags.media.TargetDuration
+import com.realeyes.hlsparserj.tags.media.*
+import java.sql.Timestamp
+import java.time.Instant
+import java.time.format.DateTimeFormatter
+import java.util.*
+import kotlin.collections.ArrayList
+import kotlin.collections.set
+
 
 /**
  * Abstract class for a media playlist.
@@ -45,8 +38,7 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
      *
      * @return list of media segments tags
      */
-    val segments: List<ExtInf?>?
-        get() = getGenericSegments(TagNames.EXTINF) as List<ExtInf?>
+    val segments = getGenericSegments(TagNames.EXTINF) as List<ExtInf?>
 
     /**
      * Return list of byte ranges tags in the media playlist.
@@ -55,8 +47,7 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
      *
      * @return list of byte ranges tags
      */
-    val byteRanges: List<ByteRange?>
-        get() = getGenericSegments(TagNames.EXTXBYTERANGE) as List<ByteRange?>
+    val byteRanges= getGenericSegments(TagNames.EXTXBYTERANGE) as List<ByteRange?>
 
     /**
      * Returns the target duration tag.  Value specifies the maximum media segment duration.
@@ -65,8 +56,7 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
      *
      * @return target duration tag
      */
-    val targetDuration: TargetDuration?
-        get() = getTag(TagNames.EXTXTARGETDURATION) as TargetDuration?
+    val targetDuration = getTag(TagNames.EXTXTARGETDURATION) as TargetDuration?
 
     /**
      * Return the media sequence tag in the playlist.  Sequence number represents the
@@ -76,8 +66,7 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
      *
      * @return media sequence
      */
-    val mediaSequence: MediaSequence?
-        get() = getTag(TagNames.EXTXMEDIASEQUENCE) as MediaSequence?
+    val mediaSequence = getTag(TagNames.EXTXMEDIASEQUENCE) as MediaSequence?
 
     /**
      * Return the allow cache tag in the playlist.  Indicates whether the client MAY
@@ -88,8 +77,7 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
      *
      * @return allow cache tag
      */
-    val allowCache: AllowCache?
-        get() = getTag(TagNames.EXTXALLOWCACHE) as AllowCache?
+    val allowCache = getTag(TagNames.EXTXALLOWCACHE) as AllowCache?
 
     /**
      * Return the playlist type tag in the playlist.  Provides mutability information
@@ -102,11 +90,9 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
      *
      * @return playlist type
      */
-    val playlistType: PlaylistType?
-        get() = getTag(TagNames.EXTXPLAYLISTTYPE) as PlaylistType?
+    val playlistType = getTag(TagNames.EXTXPLAYLISTTYPE) as PlaylistType?
 
-    override val isMasterPlaylist: Boolean
-        get() = false
+    override val isMasterPlaylist = false
 
     /**
      * Returns list of 'generic' media segments found in this playlist.  Function is
@@ -133,9 +119,17 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
             var breakId: Int? = null
             var breakPts: Float? = null
             var tagSet: MutableList<Tag> = mutableListOf()
+            var absoluteTime: Long = 0
+            var startTime: Float? = null
+            var timeUpdated = false
             for (unparsedTag in tags) {
                 val tagName: String? = unparsedTag.tagName
                 val parsedTag: Tag? = TagFactory.createTag(tagName, unparsedTag)
+                var duration = 0F
+                if (tagName == TagNames.EXTINF) {
+                    val infTag = parsedTag as ExtInf
+                    duration = infTag.duration ?: 0F
+                }
                 when (tagName) {
                     TagNames.EXTXMEDIASEQUENCE -> {
                         mediaSequence = (parsedTag as MediaSequence).sequenceNumber
@@ -148,6 +142,8 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
                     }
                     TagNames.EXTXPROGRAMDATETIME -> {
                         programDateTime = unparsedTag.getAttributes()["NONAME0"]
+                        absoluteTime = timeFromISO(programDateTime)
+                        timeUpdated = true
                     }
                     TagNames.EXTXKEY -> {
                         key = parsedTag as Key
@@ -187,6 +183,8 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
                     }
                     segmentTagName -> {
                         val segment = parsedTag as Segment
+                        absoluteTime = if (timeUpdated) absoluteTime else absoluteTime + (duration * 1000F).toLong()
+                        startTime = if (startTime == null) 0F else startTime + duration
                         segment.tag = unparsedTag
                         segment.discontinuity = discontinuity
                         segment.cueIn = cueIn
@@ -202,9 +200,12 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
                         segment.mediaSequence = mediaSequence
                         segment.discontinuitySequence = discontinuitySequence
                         segment.tags = tagSet
+                        segment.startTime = startTime
+                        segment.absoluteTime = absoluteTime
                         tagList.add(segment)
                         discontinuity = false
                         cueIn = false
+                        timeUpdated = false
                         programDateTime = null
                         caid = null
                         scte35 = null
@@ -235,4 +236,14 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
             val ifo = getTag(TagNames.EXTXIFRAMESONLY) ?: return false
             return true
         }
+
+    private fun timeFromISO(dateStr: String?): Long {
+        return try {
+            val ta = DateTimeFormatter.ISO_DATE_TIME.parse(dateStr)
+            val i = Instant.from(ta)
+            Date.from(i).time
+        } catch (e: Exception) {
+            0
+        }
+    }
 }
