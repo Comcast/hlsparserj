@@ -81,6 +81,19 @@ class MediaPlaylistTest {
     }
 
     @Test
+    fun segmentDateTime() {
+        val dateTime = 1266562463031L
+        val datetiem = mediaPlaylist?.segments?.get(0)?.absoluteTime
+        println(dateTime)
+        Assert.assertEquals(
+            mediaPlaylist?.segments?.get(0)?.absoluteTime, dateTime
+        )
+        Assert.assertEquals(
+                mediaPlaylist?.segments?.get(1)?.absoluteTime, dateTime + (mediaPlaylist?.segments?.get(1)?.duration?.times(1000F))!!.toLong()
+        )
+    }
+
+    @Test
     fun targetDuration() {
         assertEquals(mediaPlaylist?.targetDuration?.duration, 3)
     }

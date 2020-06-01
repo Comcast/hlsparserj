@@ -64,6 +64,26 @@ abstract class Segment : Tag {
     var dateTime: String? = null
 
     /**
+     * The absolute time of segment in ms.
+     * @return timestamp long for the segment
+     */
+    /**
+     * Sets the absolute time in ms.
+     * @param absoluteTime absolute time Long
+     */
+    var absoluteTime: Long? = null
+
+    /**
+     * The relative time of segment in ms.
+     * @return timestamp long for the segment
+     */
+    /**
+     * Sets the relative time in ms.
+     * @param startTime relative time Long
+     */
+    var startTime: Float? = null
+
+    /**
      * Returns all tags associated with the segment
      * @return list of Tags
      */
