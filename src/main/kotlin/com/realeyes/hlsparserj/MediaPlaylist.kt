@@ -19,7 +19,6 @@ import com.realeyes.hlsparserj.tags.TagFactory
 import com.realeyes.hlsparserj.tags.TagNames
 import com.realeyes.hlsparserj.tags.UnparsedTag
 import com.realeyes.hlsparserj.tags.media.*
-import java.sql.Timestamp
 import java.time.Instant
 import java.time.format.DateTimeFormatter
 import java.util.*
@@ -122,6 +121,7 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
             var absoluteTime: Long = 0
             var startTime: Float? = null
             var timeUpdated = false
+            var endList = false
             for (unparsedTag in tags) {
                 val tagName: String? = unparsedTag.tagName
                 val parsedTag: Tag? = TagFactory.createTag(tagName, unparsedTag)
@@ -155,6 +155,7 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
                     }
                     TagNames.EXTXCUE -> {
                         val cueTag = parsedTag as Cue
+                        caid = cueTag.caid
                         breakDuration = cueTag.duration
                         breakId = cueTag.id
                         breakPts = cueTag.time
@@ -181,11 +182,14 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
                         breakElapsed = cueOutTag.elapsedTime
                         tagSet.add(parsedTag)
                     }
+                    TagNames.EXTXENDLIST -> {
+                        endList = true
+                    }
                     segmentTagName -> {
                         val segment = parsedTag as Segment
-                        absoluteTime = if (timeUpdated) absoluteTime else absoluteTime + (duration * 1000F).toLong()
                         startTime = if (startTime == null) 0F else startTime + duration
                         segment.tag = unparsedTag
+                        segment.pdtUpdated = timeUpdated
                         segment.discontinuity = discontinuity
                         segment.cueIn = cueIn
                         segment.key = key
@@ -201,8 +205,10 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
                         segment.discontinuitySequence = discontinuitySequence
                         segment.tags = tagSet
                         segment.startTime = startTime
-                        segment.absoluteTime = absoluteTime
+                        segment.pdt = absoluteTime
+                        segment.endList = endList
                         tagList.add(segment)
+                        absoluteTime += (duration * 1000F).toLong()
                         discontinuity = false
                         cueIn = false
                         timeUpdated = false

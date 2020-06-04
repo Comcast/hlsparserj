@@ -295,6 +295,20 @@ object TagNames {
     </pre> *
      */
     const val EXTXMAP = "EXT-X-MAP"
+    /**
+     * Endlist tag.
+     *
+     * (No endlist class is required)
+     *
+     * <pre>
+     * Format:
+     * #EXT-X-ENDLIST;
+     *
+     * Example:
+     * #EXT-X-ENDLIST
+    </pre> *
+     */
+    const val EXTXENDLIST = "EXT-X-ENDLIST"
 
     init {
         TagFactory.registerTag(EXTXVERSION, Version::class)

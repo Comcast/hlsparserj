@@ -33,6 +33,7 @@ abstract class Segment : Tag {
     var scte35: SCTE35? = null
     var breakPts: Float? = null
     var breakId: Int? = null
+    var pdtUpdated: Boolean = false
 
     /**
      * Returns the discontinuity flag.
@@ -69,9 +70,9 @@ abstract class Segment : Tag {
      */
     /**
      * Sets the absolute time in ms.
-     * @param absoluteTime absolute time Long
+     * @param pdt absolute time Long
      */
-    var absoluteTime: Long? = null
+    var pdt: Long? = null
 
     /**
      * The relative time of segment in ms.

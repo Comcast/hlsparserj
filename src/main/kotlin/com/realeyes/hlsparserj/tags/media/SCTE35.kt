@@ -33,7 +33,7 @@ class SCTE35(override var tag: UnparsedTag?) : Tag {
 
     val time: Float? by lazy { tag?.getAttributes()?.get(TIME)?.toFloat() }
 
-    val type: Int? by lazy { tag?.getAttributes()?.get(TYPE)?.toInt() }
+    val type: Int? by lazy { tag?.getAttributes()?.get(TYPE)?.replace("0x", "")?.toInt(16) }
 
     val upid: String? by lazy { tag?.getAttributes()?.get(UPID) }
 
