@@ -104,8 +104,29 @@ abstract class AbstractPlaylist(
     override fun toString(): String {
         val builder = StringBuilder()
         for (tag in tags) {
-            builder.append(tag.rawTag)
-            if (tag.uri != null) {
+            var tagName = tag.tagName ?: ""
+            if (tagName.contains("NONAME")) tagName = ""
+            val prefix = if (tagName.isEmpty()) "" else "#"
+            val delimiter = when (tagName) {
+                TagNames.EXTM3U,
+                TagNames.EXTXINDEPENDENTSEGMENTS,
+                TagNames.EXTXGAP,
+                TagNames.EXTXENDLIST,
+                TagNames.EXTXIFRAMESONLY,
+                TagNames.EXTXDISCONTINUITY,
+                "" -> ""
+                else -> ":"
+            }
+            val attributes = tag.getAttributes().entries.fold("") { acc, entry ->
+                val attributeDelimiter = if (acc.isEmpty()) "" else ","
+                var key = entry.key ?: ""
+                if (key.contains("NONAME")) key = ""
+                val value = entry.value ?: ""
+                val kvDelimiter = if (key.isEmpty()) "" else "="
+                "$acc$attributeDelimiter${key}$kvDelimiter${value}"
+            }
+            builder.append("$prefix${tagName}$delimiter$attributes")
+            if (tag.uri != null && (tagName == TagNames.EXTINF || tagName == TagNames.EXTXSTREAMINF)) {
                 builder.append("\n")
                 builder.append(tag.uri)
             }
