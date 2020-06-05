@@ -123,7 +123,7 @@ abstract class AbstractPlaylist(
                 if (key.contains("NONAME")) key = ""
                 val value = entry.value ?: ""
                 val kvDelimiter = if (key.isEmpty()) "" else "="
-                "$acc$attributeDelimiter${key}$kvDelimiter${value}"
+                "$acc$attributeDelimiter${key}$kvDelimiter$value"
             }
             builder.append("$prefix${tagName}$delimiter$attributes")
             if (tag.uri != null && (tagName == TagNames.EXTINF || tagName == TagNames.EXTXSTREAMINF)) {
