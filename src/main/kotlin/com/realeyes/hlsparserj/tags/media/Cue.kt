@@ -28,7 +28,7 @@ class Cue(override var tag: UnparsedTag?) : Tag {
 
     val time: Float? by lazy { tag?.getAttributes()?.get(TIME)?.toFloat() }
 
-    val caid: String?  by lazy { tag?.getAttributes()?.get(CAID) }
+    val caid: String? by lazy { tag?.getAttributes()?.get(CAID) }
 
     companion object {
         private const val DURATION = "DURATION"

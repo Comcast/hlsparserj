@@ -310,7 +310,45 @@ object TagNames {
      */
     const val EXTXENDLIST = "EXT-X-ENDLIST"
 
+    /**
+     * The EXTM3U tag indicates that the file is an Extended M3U [M3U]
+     * Playlist file.  It MUST be the first line of every Media Playlist and
+     * every Master Playlist.  Its format is:
+     *
+     * #EXTM3U
+     */
+    const val EXTM3U = "EXTM3U"
+
+    /**
+     * The EXT-X-INDEPENDENT-SEGMENTS tag indicates that all media samples
+     * in a Media Segment can be decoded without information from other
+     * segments.  It applies to every Media Segment in the Playlist.
+     *
+     * Its format is:
+     *
+     * #EXT-X-INDEPENDENT-SEGMENTS
+     *
+     * If the EXT-X-INDEPENDENT-SEGMENTS tag appears in a Master Playlist,
+     * it applies to every Media Segment in every Media Playlist in the
+     * Master Playlist.
+     */
+    const val EXTXINDEPENDENTSEGMENTS = "EXT-X-INDEPENDENT-SEGMENTS"
+
+    /**
+     * The EXT-X-GAP tag indicates that the segment URL to which it applies
+     * does not contain media data and SHOULD NOT be loaded by clients.  It
+     * applies only to the next Media Segment.
+     *
+     * Its format is:
+     *
+     * #EXT-X-GAP
+     */
+    const val EXTXGAP = "EXT-X-GAP"
+
     init {
+        TagFactory.registerTag(EXTM3U, Version::class)
+        TagFactory.registerTag(EXTXGAP, Version::class)
+        TagFactory.registerTag(EXTXINDEPENDENTSEGMENTS, Version::class)
         TagFactory.registerTag(EXTXVERSION, Version::class)
         TagFactory.registerTag(EXTXSTREAMINF, StreamInf::class)
         TagFactory.registerTag(EXTXMEDIA, Media::class)
