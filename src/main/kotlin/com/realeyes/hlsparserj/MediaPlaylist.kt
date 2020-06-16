@@ -110,7 +110,7 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
             var cueIn = false
             var map: String? = null
             var programDateTime: String? = null
-            var key: Key? = null
+            var keys: MutableList<Key?> = mutableListOf()
             var caid: String? = null
             var scte35: SCTE35? = null
             var breakDuration: Float? = null
@@ -146,7 +146,7 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
                         timeUpdated = true
                     }
                     TagNames.EXTXKEY -> {
-                        key = parsedTag as Key
+                        keys.add(parsedTag as Key)
                         tagSet.add(parsedTag)
                     }
                     TagNames.EXTXASSET -> {
@@ -192,7 +192,7 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
                         segment.pdtUpdated = timeUpdated
                         segment.discontinuity = discontinuity
                         segment.cueIn = cueIn
-                        segment.key = key
+                        segment.keys = keys
                         segment.dateTime = programDateTime
                         segment.breakDuration = breakDuration
                         segment.breakElapsed = breakElapsed
@@ -211,6 +211,7 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
                         absoluteTime += (duration * 1000F).toLong()
                         discontinuity = false
                         cueIn = false
+                        keys = mutableListOf()
                         timeUpdated = false
                         programDateTime = null
                         caid = null

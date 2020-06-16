@@ -52,7 +52,7 @@ abstract class Segment : Tag {
      * Sets the key.
      * @param key key
      */
-    var key: Key? = null
+    var keys: List<Key?>? = null
 
     /**
      * Returns the date and time string.
