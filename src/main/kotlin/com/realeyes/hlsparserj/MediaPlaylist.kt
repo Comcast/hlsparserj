@@ -19,8 +19,7 @@ import com.realeyes.hlsparserj.tags.TagFactory
 import com.realeyes.hlsparserj.tags.TagNames
 import com.realeyes.hlsparserj.tags.UnparsedTag
 import com.realeyes.hlsparserj.tags.media.*
-import java.time.Instant
-import java.time.format.DateTimeFormatter
+import java.text.SimpleDateFormat
 import java.util.*
 import kotlin.collections.ArrayList
 import kotlin.collections.set
@@ -211,7 +210,7 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
                         absoluteTime += (duration * 1000F).toLong()
                         discontinuity = false
                         cueIn = false
-                        keys = mutableListOf()
+                        keys.clear()
                         timeUpdated = false
                         programDateTime = null
                         caid = null
@@ -245,12 +244,17 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
         }
 
     private fun timeFromISO(dateStr: String?): Long {
-        return try {
-            val ta = DateTimeFormatter.ISO_DATE_TIME.parse(dateStr)
-            val i = Instant.from(ta)
-            Date.from(i).time
-        } catch (e: Exception) {
-            0
-        }
+        val formats = listOf(SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX"), SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS"), SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ"))
+        val time = formats.tryParse(dateStr)
+        return time?.time ?: 0
     }
+}
+
+fun List<SimpleDateFormat>.tryParse(dateStr: String?): Date? {
+    this.forEach { format ->
+        try {
+            return format.parse(dateStr)
+        } catch(e: Exception) { /** Swallow exception */ }
+    }
+    return null
 }

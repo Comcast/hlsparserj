@@ -109,10 +109,10 @@ class MediaPlaylistTest {
 
     @Test
     fun key() {
-        val key: Key? = mediaPlaylist?.segments?.get(5)?.key
-        assertEquals(key?.iv, "0xb059217aa2649ce170b734")
-        assertEquals(key?.method, "AES-128")
-        assertEquals(key?.uri, "https://secure.domain.com")
+        val key: List<Key?>? = mediaPlaylist?.segments?.get(5)?.keys
+        assertEquals(key?.get(0)?.iv, "0xb059217aa2649ce170b734")
+        assertEquals(key?.get(0)?.method, "AES-128")
+        assertEquals(key?.get(0)?.uri, "https://secure.domain.com")
     }
 
     @Test
