@@ -244,7 +244,7 @@ abstract class MediaPlaylist(version: PlaylistVersion, tags: MutableList<Unparse
         }
 
     private fun timeFromISO(dateStr: String?): Long {
-        val formats = listOf(SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSXXX"), SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS"), SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ"))
+        val formats = listOf(SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSS"), SimpleDateFormat("yyyy-MM-dd'T'HH:mm:ss.SSSZ"))
         val time = formats.tryParse(dateStr)
         return time?.time ?: 0
     }
